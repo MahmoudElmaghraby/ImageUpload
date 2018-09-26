@@ -100,9 +100,8 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
                 && data != null && data.getData() != null) {
             mImageUri = data.getData();
-
-            //Picasso.with(this).load(mImageUri).into(mImageView);
-            mImageView.setImageURI(mImageUri);
+            Picasso.with(this).load(mImageUri).into(mImageView);
+            //mImageView.setImageURI(mImageUri);
         }
     }
 
@@ -114,13 +113,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void uploadFile() {
         if (mImageUri != null) {
-            StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()
+            final StorageReference fileReference = mStorageRef.child(System.currentTimeMillis()
                     + "." + getFileExtension(mImageUri));
 
             mUploadTask = fileReference.putFile(mImageUri)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                        @Override
-                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                            @Override
+                            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Handler handler = new Handler();
                             handler.postDelayed(new Runnable() {
                                 @Override
@@ -129,12 +128,31 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }, 500);
 
+
                             Toast.makeText(MainActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
-                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
-                                    //taskSnapshot.getDownloadUrl().toString());
-                                    taskSnapshot.getUploadSessionUri().toString());
-                            String uploadId = mDatabaseRef.push().getKey();
-                            mDatabaseRef.child(uploadId).setValue(upload);
+
+                            fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    Upload upload = new Upload(mEditTextFileName.getText().toString().trim()
+                                    , uri.toString());
+                                    String uploadId = mDatabaseRef.push().getKey();
+                                    mDatabaseRef.child(uploadId).setValue(upload);
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(MainActivity.this, "Failure", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+
+
+
+//                            Upload upload = new Upload(mEditTextFileName.getText().toString().trim(),
+//                                    //taskSnapshot.getDownloadUrl().toString());
+//                                    taskSnapshot.getUploadSessionUri().toString());
+//                            String uploadId = mDatabaseRef.push().getKey();
+//                            mDatabaseRef.child(uploadId).setValue(upload);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

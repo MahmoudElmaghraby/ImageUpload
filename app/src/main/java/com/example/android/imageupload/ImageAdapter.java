@@ -13,6 +13,8 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+
+
 import java.util.List;
 
 
@@ -36,7 +38,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     public void onBindViewHolder(ImageViewHolder holder, int position) {
         Upload uploadCurrent = mUploads.get(position);
         holder.textViewName.setText(uploadCurrent.getName());
-        Picasso.get()
+        Picasso.with(mContext)
                 .load(uploadCurrent.getImageUrl())
                 .placeholder(R.mipmap.ic_launcher)
                 .fit()

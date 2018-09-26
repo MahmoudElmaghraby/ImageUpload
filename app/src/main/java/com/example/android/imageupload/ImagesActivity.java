@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -63,6 +64,8 @@ public class ImagesActivity extends AppCompatActivity implements ImageAdapter.On
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setKey(postSnapshot.getKey());
+//                    Toast.makeText(ImagesActivity.this, "Key is : "+ postSnapshot.getKey() , Toast.LENGTH_SHORT).show();
+
                     mUploads.add(upload);
                 }
 

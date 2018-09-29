@@ -1,3 +1,30 @@
 <resources>
-    <string name="app_name">Image Upload</string>
+    <string name="app_name">MR. PISTON</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="mainStringArray">
+        <item>model 1</item>
+        <item>model 2</item>
+        <item>model 3</item>
+    </string-array>
+
+    <string-array name="subStringArray1">
+        <item>SubModel 1_1</item>
+        <item>SubModel 1_2</item>
+        <item>SubModel 1_3</item>
+    </string-array>
+
+    <string-array name="subStringArray2">
+        <item>SubModel 2_1</item>
+        <item>SubModel 2_2</item>
+        <item>SubModel 2_3</item>
+    </string-array>
+
+    <string-array name="subStringArray3">
+        <item>SubModel 3_1</item>
+        <item>SubModel 3_2</item>
+        <item>SubModel 3_3</item>
+    </string-array>
 </resources>

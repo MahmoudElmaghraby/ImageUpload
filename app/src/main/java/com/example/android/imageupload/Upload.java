@@ -1,48 +1,177 @@
 package com.example.android.imageupload;
 
-import com.google.firebase.database.Exclude;
-
 public class Upload {
-    private String mName;
-    private String mImageUrl;
+    private String name;
+    private String mModel;
+    private String mSubModel;
+    private String mProvider;
+    private int mYear;
+    private String mPartNo;
+    private String mCat;
+    private float mBPrice;
+    private float mSPrice;
+    private float mProfit;
+
+    public String getmType() {
+        return mType;
+    }
+
+    public void setmType(String mType) {
+        this.mType = mType;
+    }
+
+    private String mType = "my Type" ;
+
+    private String imageUrl;
     private String mKey;
 
     public Upload() {
         //empty constructor needed
     }
 
-    public Upload(String name, String imageUrl) {
-        if (name.trim().equals("")) {
-            name = "No Name";
-        }
-
-        mName = name;
-        mImageUrl = imageUrl;
+    public Upload(String name, String mModel, String mSubModel, String mProvider, int mYear, String mPartNo, String mCat, float mBPrice, float mSPrice, float mProfit, String imageUrl) {
+        this.name = name;
+        this.mModel = mModel;
+        this.mSubModel = mSubModel;
+        this.mProvider = mProvider;
+        this.mYear = mYear;
+        this.mPartNo = mPartNo;
+        this.mCat = mCat;
+        this.mBPrice = mBPrice;
+        this.mSPrice = mSPrice;
+        this.mProfit = mProfit;
+        this.imageUrl = imageUrl;
     }
 
     public String getName() {
-        return mName;
+        return name;
     }
 
     public void setName(String name) {
-        mName = name;
+        this.name = name;
+    }
+
+    public String getmModel() {
+        return mModel;
+    }
+
+    public void setmModel(String mModel) {
+        this.mModel = mModel;
+    }
+
+    public String getmSubModel() {
+        return mSubModel;
+    }
+
+    public void setmSubModel(String mSubModel) {
+        this.mSubModel = mSubModel;
+    }
+
+    public String getmProvider() {
+        return mProvider;
+    }
+
+    public void setmProvider(String mProvider) {
+        this.mProvider = mProvider;
+    }
+
+    public int getmYear() {
+        return mYear;
+    }
+
+    public void setmYear(int mYear) {
+        this.mYear = mYear;
+    }
+
+    public String getmPartNo() {
+        return mPartNo;
+    }
+
+    public void setmPartNo(String mPartNo) {
+        this.mPartNo = mPartNo;
+    }
+
+    public String getmCat() {
+        return mCat;
+    }
+
+    public void setmCat(String mCat) {
+        this.mCat = mCat;
+    }
+
+    public float getmBPrice() {
+        return mBPrice;
+    }
+
+    public void setmBPrice(float mBPrice) {
+        this.mBPrice = mBPrice;
+    }
+
+    public float getmSPrice() {
+        return mSPrice;
+    }
+
+    public void setmSPrice(float mSPrice) {
+        this.mSPrice = mSPrice;
+    }
+
+    public float getmProfit() {
+        return mProfit;
+    }
+
+    public void setmProfit(float mProfit) {
+        this.mProfit = mProfit;
     }
 
     public String getImageUrl() {
-        return mImageUrl;
+        return imageUrl;
     }
 
     public void setImageUrl(String imageUrl) {
-        mImageUrl = imageUrl;
+        this.imageUrl = imageUrl;
     }
 
-    @Exclude
-    public String getKey() {
+    public String getmKey() {
         return mKey;
     }
 
-    @Exclude
-    public void setKey(String key) {
-        mKey = key;
+    public void setmKey(String mKey) {
+        this.mKey = mKey;
     }
+
+
+    //    public Upload(String name, String imageUrl) {
+//        if (name.trim().equals("")) {
+//            name = "No Name";
+//        }
+//
+//        name = name;
+//        imageUrl = imageUrl;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        name = name;
+//    }
+//
+//    public String getImageUrl() {
+//        return imageUrl;
+//    }
+//
+//    public void setImageUrl(String imageUrl) {
+//        imageUrl = imageUrl;
+//    }
+//
+//    @Exclude
+//    public String getKey() {
+//        return mKey;
+//    }
+//
+//    @Exclude
+//    public void setKey(String key) {
+//        mKey = key;
+//    }
 }

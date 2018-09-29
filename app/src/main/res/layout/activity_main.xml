@@ -1,66 +1,356 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context="com.example.android.imageupload.MainActivity">
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_choose_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose file" />
-
-    <EditText
-        android:id="@+id/edit_text_file_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/button_choose_image"
-        android:hint="Enter file name"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@+id/button_choose_image" />
-
-    <ImageView
-        android:id="@+id/image_view"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/progress_bar"
-        android:layout_below="@id/edit_text_file_name"
-        android:layout_marginTop="16dp" />
+        android:orientation="vertical">
 
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#a4a4a4">
+
+            <RelativeLayout
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--android:layout_below="@id/toolbar"-->
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="151dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="top"
+                    android:src="@drawable/wall" />
+
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="152dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:background="@drawable/custome_buttons"
+                    android:hint="Find needed spare parts here.."
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="#4b4c4c"
+                    android:textColorHint="#4b4c4c"
+                    android:textSize="12sp"
+
+                    />
+
+                <Button
+                    android:id="@+id/srch_btn"
+                    android:layout_width="51dp"
+                    android:layout_height="38dp"
+                    android:layout_alignTop="@+id/search_bar"
+                    android:layout_marginLeft="-15dp"
+                    android:layout_marginTop="-3dp"
+                    android:layout_toRightOf="@+id/search_bar"
+                    android:background="@drawable/ggg"
+                    android:src="@drawable/ggg"
+                    android:layout_marginStart="-15dp"
+                    android:layout_toEndOf="@+id/search_bar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="160dp"
+                    android:text="WELCOME TO "
+                    android:textColor="#4b4c4c"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="177dp"
+                    android:text="MR. PISTON"
+                    android:textColor="#4b4c4c"
+                    android:textSize="12sp"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:id="@+id/thirdtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="190dp"
+                    android:text="NOW YOU CAN PURCHASE EASILY !"
+                    android:textColor="#4b4c4c"
+                    android:textSize="8sp"
+                    app:fontFamily="@font/lato" />
+
+
+                <Button
+                    android:id="@+id/left_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignTop="@+id/thirdtext"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toLeftOf="@+id/middle_button"
+                    android:background="@drawable/lubricant"
+                    android:layout_marginEnd="30dp"
+                    android:layout_toStartOf="@+id/middle_button" />
+
+                <Button
+                    android:id="@+id/middle_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignTop="@+id/thirdtext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/s_p" />
+
+                <Button
+                    android:id="@+id/right_button"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_alignTop="@+id/thirdtext"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_toRightOf="@+id/middle_button"
+                    android:background="@drawable/m_b"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/middle_button" />
+
+                <TextView
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/left_button"
+                    android:layout_toLeftOf="@+id/search_bar"
+                    android:layout_toStartOf="@+id/search_bar"
+                    android:text="LUBRICANTS"
+                    android:textColor="#FFFFFF"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/left_button"
+                    android:layout_centerHorizontal="true"
+                    android:text="SPARE PARTS"
+                    android:textColor="#FFFFFF"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/left_button"
+                    android:layout_toEndOf="@+id/search_bar"
+                    android:layout_toRightOf="@+id/search_bar"
+                    android:text="MAINTENANCE"
+                    android:textColor="#FFFFFF"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/button9"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:background="#1b1b1b"
+                    android:gravity="center_horizontal"
+                    android:text="ALL COPYRIGHTS FOR MR. PISTON ® ARE RESERVED."
+                    android:textColor="#4b4c4c"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/About"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="330dp"
+                    android:text="ABOUT"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:id="@+id/kbeer"
+                    android:layout_width="333dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/About"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:lineSpacingExtra="1sp"
+                    android:text="Mr. Piston aims to facilitate the market of automobiles' spare parts for his clients who can get all spare parts for their cars with many features such as our attractive prices, our delivery services, rapid response with professional digital marketing technology by using our mobile application."
+                    android:textAlignment="center"
+                    android:textColor="#4b4c4c"
+                    android:textSize="15sp"
+                    app:fontFamily="@font/lato" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/kbeer"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="135dp"
+                    android:text="CONTACT US"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:fontFamily="@font/lato" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="120dp"
+                    android:layout_height="247dp"
+                    android:layout_alignLeft="@+id/srch_btn"
+                    android:layout_alignStart="@+id/srch_btn"
+                    android:layout_marginTop="290dp"
+                    android:src="@drawable/piston_stamp" />
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/contact"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@+id/button8"
+                    android:layout_toStartOf="@+id/button8"
+                    android:background="@drawable/facebook1" />
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/contact"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toLeftOf="@+id/button9"
+                    android:layout_toStartOf="@+id/button9"
+                    android:background="@drawable/instagram1" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/contact"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/youtube1"
+
+                    />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/contact"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/button9"
+                    android:layout_toRightOf="@+id/button9"
+                    android:background="@drawable/linkedin1" />
+
+                <Button
+                    android:id="@+id/button11"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/contact"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/button10"
+                    android:layout_toRightOf="@+id/button10"
+                    android:background="@drawable/tweeter1" />
+
+
+            </RelativeLayout>
+            <!-- Inflate the contents of the ScrollView dynamicaly -->
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button_upload"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentLeft="true" />
+        android:layout_gravity="start"
+        android:background="#1b1b1b">
 
-    <Button
-        android:id="@+id/button_upload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="Upload" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_view_show_uploads"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/button_upload"
-        android:layout_alignTop="@+id/button_upload"
-        android:layout_marginStart="25dp"
-        android:layout_toEndOf="@+id/button_upload"
-        android:gravity="center"
-        android:text="Show Uploads"
-        android:textSize="16sp"
-        android:layout_toRightOf="@+id/button_upload"
-        android:layout_marginLeft="25dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-</RelativeLayout>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/header" />
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_pic_tab" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#1b1b1b"
+                    android:text="USER NAME"
+                    android:textColor="#960202"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#1b1b1b"
+                    android:text="LOCATION"
+                    android:textColor="#960202"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="#1b1b1b"
+                    android:text="CALL US"
+                    android:textColor="#960202"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

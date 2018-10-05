@@ -11,7 +11,6 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.android.imageupload.MainActivity.* ;
 import com.squareup.picasso.Picasso;
 
 public class ProductDetails extends AppCompatActivity {
@@ -57,16 +56,16 @@ public class ProductDetails extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String id = MainActivity.mrPistonDBRef.push().getKey();
-                Orders myOrder = new Orders( id ,
+                Order myOrder = new Order( id ,
                         MainActivity.productName ,
-                        MainActivity.productPrice ,
+                        (float) MainActivity.productPrice ,
                         MainActivity.loggedLocation ,
                         MainActivity.loggedPhone ,
                         MainActivity.loggedEmail ,
                         MainActivity.productPtNo ,
                         MainActivity.loggedName ,
-                        numPicker.getValue() ,
-                        500);
+                        (int) numPicker.getValue() ,
+                        (int) 500);
 
 
                 MainActivity.mrPistonDBRef.child("Orders").child(id).setValue(myOrder);

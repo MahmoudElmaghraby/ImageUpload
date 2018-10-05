@@ -12,14 +12,6 @@ public class Upload {
     private float mSPrice;
     private float mProfit;
 
-    public String getmType() {
-        return mType;
-    }
-
-    public void setmType(String mType) {
-        this.mType = mType;
-    }
-
     private String mType = "my Type" ;
 
     private String imageUrl;
@@ -41,6 +33,14 @@ public class Upload {
         this.mSPrice = mSPrice;
         this.mProfit = mProfit;
         this.imageUrl = imageUrl;
+    }
+
+    public String getmType() {
+        return mType;
+    }
+
+    public void setmType(String mType) {
+        this.mType = mType;
     }
 
     public String getName() {

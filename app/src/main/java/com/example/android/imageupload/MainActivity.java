@@ -222,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
                             @Override
                             public void onCancelled(DatabaseError databaseError) {
 
+                                Toast.makeText(MainActivity.this, "" + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+
                             }
                         });
                     }

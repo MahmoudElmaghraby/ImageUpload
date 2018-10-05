@@ -11,20 +11,20 @@
     </string-array>
 
     <string-array name="subStringArray1">
-        <item>SubModel 1_1</item>
-        <item>SubModel 1_2</item>
-        <item>SubModel 1_3</item>
+        <item>toyota 1</item>
+        <item>toyota 2</item>
+        <item>toyota 3</item>
     </string-array>
 
     <string-array name="subStringArray2">
-        <item>SubModel 2_1</item>
-        <item>SubModel 2_2</item>
-        <item>SubModel 2_3</item>
+        <item>kin 1</item>
+        <item>kin 2</item>
+        <item>kin 3</item>
     </string-array>
 
     <string-array name="subStringArray3">
-        <item>SubModel 3_1</item>
-        <item>SubModel 3_2</item>
-        <item>SubModel 3_3</item>
+        <item>hyundai 1</item>
+        <item>hyundai 2</item>
+        <item>hyundai 3</item>
     </string-array>
 </resources>

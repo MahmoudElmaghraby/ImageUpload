@@ -16,7 +16,8 @@ import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.android.imageupload.MainActivity.* ;
+
+import com.example.android.imageupload.MainActivity.*;
 
 public class LeftButton extends AppCompatActivity {
     private RecyclerView mRecyclerView;
@@ -43,7 +44,6 @@ public class LeftButton extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
 
 
-
         mStorage = FirebaseStorage.getInstance();
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");
 
@@ -62,7 +62,8 @@ public class LeftButton extends AppCompatActivity {
                 }
 
                 mAdapter.notifyDataSetChanged();
-                }
+
+            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -80,9 +81,9 @@ public class LeftButton extends AppCompatActivity {
                 MainActivity.productPtNo = currentUpload.getmPartNo();
                 MainActivity.productType = currentUpload.getmType();
                 MainActivity.productPrice = currentUpload.getmSPrice();
-                MainActivity.productImage = currentUpload.getImageUrl() ;
+                MainActivity.productImage = currentUpload.getImageUrl();
 
-                Intent intent = new Intent(LeftButton.this , ProductDetails.class);
+                Intent intent = new Intent(LeftButton.this, ProductDetails.class);
                 startActivity(intent);
 
             }
@@ -90,6 +91,7 @@ public class LeftButton extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();

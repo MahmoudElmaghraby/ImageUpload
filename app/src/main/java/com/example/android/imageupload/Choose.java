@@ -21,6 +21,8 @@ public class Choose extends AppCompatActivity {
     private Button okButton , button1 , button2 , button3 , button1_1 , button1_2;
     private ImageView toyotaImage , kinImage , hyundaiImage ;
     private LinearLayout sup1 , sup1_1 ;
+    public static String brand , model;
+    public static int year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,18 +57,24 @@ public class Choose extends AppCompatActivity {
         toyotaImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Toyota";
+
                 sup1.setVisibility(View.VISIBLE);
                 sup1_1.setVisibility(View.GONE);
+                okButton.setVisibility(View.GONE);
 
-                button1.setText("Toyota 1");
+                button1.setText("Corolla");
                 button1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Corolla";
                         sup1_1.setVisibility(View.VISIBLE);
-                        button1_1.setText("Toyota 1_1");
+                        button1_1.setText("2005");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2005;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 1 -->Toyota 1_1
@@ -75,10 +83,12 @@ public class Choose extends AppCompatActivity {
                         });
 
 
-                        button1_2.setText("Toyota 1_2");
+                        button1_2.setText("2007");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2007 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 1 -->Toyota 1_2
@@ -89,16 +99,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button2.setText("Toyota 2");
+                button2.setText("Avalon");
                 button2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Avalon" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Toyota 2_1");
+                        button1_1.setText("2010");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2010 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 2 -->Toyota 2_1
@@ -106,10 +119,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Toyota 2_2");
+                        button1_2.setText("2012");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2012 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 2 -->Toyota 2_2
@@ -120,16 +135,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button3.setText("Toyota 3");
+                button3.setText("Camry");
                 button3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Camry" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Toyota 3_1");
+                        button1_1.setText("2015");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2015 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 3 -->Toyota 3_1
@@ -137,10 +155,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Toyota 3_2");
+                        button1_2.setText("2013");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2013 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Toyota-->Toyota 3 -->Toyota 3_2
@@ -158,19 +178,24 @@ public class Choose extends AppCompatActivity {
         kinImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Kia" ;
                 sup1.setVisibility(View.VISIBLE);
                 sup1_1.setVisibility(View.GONE);
+                okButton.setVisibility(View.GONE);
 
-                button1.setText("Kin 1");
+                button1.setText("Cadenza");
                 button1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Cadenza" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Kin 1_1");
+                        button1_1.setText("2012");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2012 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 1 -->Kin 1_1
@@ -178,10 +203,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Kin 1_2");
+                        button1_2.setText("2011");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2011 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 1 -->Kin 1_2
@@ -192,16 +219,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button2.setText("Kin 2");
+                button2.setText("Forte");
                 button2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        brand = "Forte" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Kin 2_1");
+                        button1_1.setText("2006");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2006 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 2 -->Kin 2_1
@@ -209,10 +239,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Kin 2_2");
+                        button1_2.setText("2007");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2007 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 2 -->Kin 2_2
@@ -223,16 +255,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button3.setText("Kin 3");
+                button3.setText("Optima");
                 button3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Optima" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Kin 3_1");
+                        button1_1.setText("2017");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2017 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 3 -->Kin 3_1
@@ -240,10 +275,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Kin 3_2");
+                        button1_2.setText("2018");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2018 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Kin-->Kin 3 -->Kin 3_2
@@ -261,19 +298,24 @@ public class Choose extends AppCompatActivity {
         hyundaiImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Hyundai" ;
                 sup1.setVisibility(View.VISIBLE);
                 sup1_1.setVisibility(View.GONE);
+                okButton.setVisibility(View.GONE);
 
-                button1.setText("Hyundai 1");
+                button1.setText("Elantra");
                 button1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Elantra" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Hyundai 1_1");
+                        button1_1.setText("2018");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2018 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 1 -->Hyundai 1_1
@@ -281,10 +323,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Hyundai 1_2");
+                        button1_2.setText("2016");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2016 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 1 -->Hyundai 1_2
@@ -296,16 +340,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button2.setText("Hyundai 2");
+                button2.setText("Veloster");
                 button2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Veloster" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Hyundai 2_1");
+                        button1_1.setText("2019");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2019 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 2 -->Hyundai 2_1
@@ -313,11 +360,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-
-                        button1_2.setText("Hyundai 2_2");
+                        button1_2.setText("2017");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2017 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 2 -->Hyundai 2_2
@@ -328,16 +376,19 @@ public class Choose extends AppCompatActivity {
                     }
                 });
 
-                button3.setText("Hyundai 3");
+                button3.setText("Tucson");
                 button3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        model = "Tucson" ;
                         sup1_1.setVisibility(View.VISIBLE);
 
-                        button1_1.setText("Hyundai 3_1");
+                        button1_1.setText("2017");
                         button1_1.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2017 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 3 -->Hyundai 3_1
@@ -345,10 +396,12 @@ public class Choose extends AppCompatActivity {
                             }
                         });
 
-                        button1_2.setText("Hyundai 3_2");
+                        button1_2.setText("2016");
                         button1_2.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
+                                year = 2016 ;
+                                okButton.setVisibility(View.VISIBLE);
                                 /**
                                  * Type here what will happen if the user select
                                  * Hyundai-->Hyundai 3 -->Hyundai 3_2

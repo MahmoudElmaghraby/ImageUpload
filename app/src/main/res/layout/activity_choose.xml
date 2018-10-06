@@ -4,36 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#a4a4a4"
     android:orientation="vertical"
+    android:background="#a4a4a4"
     tools:context=".Choose">
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
-
-
+        layout="@layout/toolbar"/>
 
 
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:layout_alignParentLeft="true">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:gravity="center"
             android:text="SELECT\nAUTOMOBILE BRAND"
-            android:textColor="@android:color/white"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:textColor="@android:color/white"/>
 
 
         <LinearLayout
@@ -47,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"/>
 
 
             <ImageView
@@ -55,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"/>
 
 
             <ImageView
@@ -63,7 +61,8 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"/>
+
 
 
         </LinearLayout>
@@ -74,15 +73,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:paddingBottom="8dp">
 
             <Button
                 android:id="@+id/button_1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="test 1" />
+                android:text="test 1"/>
 
 
             <Button
@@ -90,7 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="test 2" />
+                android:text="test 2"/>
 
 
             <Button
@@ -98,7 +97,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="test 3" />
+                android:text="test 3"/>
 
         </LinearLayout>
 
@@ -108,15 +107,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="8dp"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:paddingBottom="8dp">
 
             <Button
                 android:id="@+id/button_1_1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="test 1_1" />
+                android:text="test 1_1"/>
 
 
             <Button
@@ -124,212 +123,212 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="test 2" />
+                android:text="test 2"/>
 
         </LinearLayout>
 
         <!--<Spinner-->
-        <!--android:id="@+id/main_spinner"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp" />-->
+            <!--android:id="@+id/main_spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp" />-->
 
         <!--<Spinner-->
-        <!--android:id="@+id/sub_spinner1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone" />-->
+            <!--android:id="@+id/sub_spinner1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone" />-->
 
         <!--<Spinner-->
-        <!--android:id="@+id/sub_spinner2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone" />-->
+            <!--android:id="@+id/sub_spinner2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone" />-->
 
         <!--<Spinner-->
-        <!--android:id="@+id/sub_spinner3"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone" />-->
+            <!--android:id="@+id/sub_spinner3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone" />-->
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_1_1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_1_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 1_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 1_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 1_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 1_2" />-->
 
         <!--</RadioGroup>-->
 
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_1_2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_1_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 2_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 2_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 2_2" />-->
-
-        <!--</RadioGroup>-->
-
-
-        <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_1_3"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 3_1" />-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="toyota 3_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 2_2" />-->
 
         <!--</RadioGroup>-->
 
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_2_1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_1_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 1_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 3_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 1_2" />-->
-
-        <!--</RadioGroup>-->
-
-
-        <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_2_2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 2_1" />-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 2_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="toyota 3_2" />-->
 
         <!--</RadioGroup>-->
 
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_2_3"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_2_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 3_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 1_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="kin 3_2" />-->
-
-        <!--</RadioGroup>-->
-
-        <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_3_1"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 1_1" />-->
-
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 1_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 1_2" />-->
 
         <!--</RadioGroup>-->
 
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_3_2"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_2_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 2_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 2_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 2_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 2_2" />-->
 
         <!--</RadioGroup>-->
 
 
         <!--<RadioGroup-->
-        <!--android:id="@+id/sub_radio_group_3_3"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:visibility="gone">-->
+            <!--android:id="@+id/sub_radio_group_2_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 3_1" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 3_1" />-->
 
-        <!--<RadioButton-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="hyundai 3_2" />-->
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="kin 3_2" />-->
+
+        <!--</RadioGroup>-->
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/sub_radio_group_3_1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 1_1" />-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 1_2" />-->
+
+        <!--</RadioGroup>-->
+
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/sub_radio_group_3_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 2_1" />-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 2_2" />-->
+
+        <!--</RadioGroup>-->
+
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/sub_radio_group_3_3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="8dp"-->
+            <!--android:visibility="gone">-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 3_1" />-->
+
+            <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="hyundai 3_2" />-->
 
         <!--</RadioGroup>-->
 
@@ -337,7 +336,8 @@
             android:id="@+id/ok_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OK" />
+            android:text="OK"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
@@ -346,15 +346,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
 
     <ImageView
         android:layout_width="120dp"
         android:layout_height="247dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/piston_stamp" />
+        android:src="@drawable/piston_stamp"
+        android:layout_alignParentRight="true" />
 
 </RelativeLayout>

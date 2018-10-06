@@ -45,23 +45,25 @@ public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    public static int loggedIn ;
+    public static int loggedIn = 0 ;
     public static String loggedPhone;
     public static String loggedName;
     public static String loggedLocation;
     public static String loggedEmail;
-
+    public static boolean searchbarpressed = false;
     public static String productName;
     public static float productPrice;
     public static String productType;
     public static String productPtNo;
     public static String productImage ;
 
-    private TextView userNameTv, phoneNumberTv, locatioTv, imageTv;
+    public static String searchBarText ;
+
+    private TextView userNameTv, phoneNumberTv, locatioTv, imageTv , emailTextView , passwordTextView;
     private DrawerLayout drawer;
     private Query query;
-    private EditText userNameEditText, userPassword, userEmailEditText, userPhoneNumber, userLocation;
-    private Button registrationButton, loginButton, leftButton, middleButton, rightButton;
+    private EditText userNameEditText, userPassword, userEmailEditText, userPhoneNumber, userLocation , searchBar;
+    private Button registrationButton, loginButton, logoutButton , leftButton, middleButton, rightButton , searchButton;
     private Users user;
     private FirebaseDatabase database;
     public static DatabaseReference mrPistonDBRef;
@@ -99,6 +101,20 @@ public class MainActivity extends AppCompatActivity {
         leftButton = findViewById(R.id.left_button);
         middleButton = findViewById(R.id.middle_button);
         rightButton = findViewById(R.id.right_button);
+
+        searchBar = findViewById(R.id.search_bar);
+
+        searchButton = findViewById(R.id.srch_btn);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                searchBarText = searchBar.getText().toString() ;
+                searchbarpressed = true;
+                Intent intent = new Intent(MainActivity.this , LeftButton.class);
+                startActivity(intent);
+            }
+        });
 
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.add:
 
-                Dialog dialog = new Dialog(MainActivity.this, R.style.NewDialog);
+                final Dialog dialog = new Dialog(MainActivity.this, R.style.NewDialog);
                 dialog.setContentView(R.layout.activity_registration);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -157,10 +173,31 @@ public class MainActivity extends AppCompatActivity {
                 phoneNumberTv = dialog.findViewById(R.id.phone_number_textView);
                 locatioTv = dialog.findViewById(R.id.location_textView);
                 imageTv = dialog.findViewById(R.id.image_textView);
+                emailTextView = dialog.findViewById(R.id.email_text_view);
+                passwordTextView = dialog.findViewById(R.id.password_textView);
                 loginButton = dialog.findViewById(R.id.login_button);
                 registrationButton = dialog.findViewById(R.id.register_button);
+                logoutButton = dialog.findViewById(R.id.logout_button);
                 userImage = dialog.findViewById(R.id.user_image);
                 mProgressBar = dialog.findViewById(R.id.progress_bar);
+                if (loggedIn == 1){
+                    logoutButton.setVisibility(View.VISIBLE);
+                    emailTextView.setVisibility(View.GONE);
+                    userEmailEditText.setVisibility(View.GONE);
+                    passwordTextView.setVisibility(View.GONE);
+                    userPassword.setVisibility(View.GONE);
+                    loginButton.setVisibility(View.GONE);
+                    registrationButton.setVisibility(View.GONE);
+                }
+                else{
+                    logoutButton.setVisibility(View.GONE);
+                    emailTextView.setVisibility(View.VISIBLE);
+                    userEmailEditText.setVisibility(View.VISIBLE);
+                    passwordTextView.setVisibility(View.VISIBLE);
+                    userPassword.setVisibility(View.VISIBLE);
+                    loginButton.setVisibility(View.VISIBLE);
+                    registrationButton.setVisibility(View.VISIBLE);
+                }
 
                 // ADD NEW USERS EL GDEEDA
                 registrationButton.setOnClickListener(new View.OnClickListener() {
@@ -206,10 +243,42 @@ public class MainActivity extends AppCompatActivity {
                                             Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
                                             clearViews();
                                             loggedIn = 1;
+
                                             loggedLocation = dataSnapshot.child(userGetter).child("location").getValue().toString();
                                             loggedEmail = dataSnapshot.child(userGetter).child("userEmail").getValue().toString();
                                             loggedPhone = dataSnapshot.child(userGetter).child("userPhone").getValue().toString();
                                             loggedName = dataSnapshot.child(userGetter).child("userName").getValue().toString();
+                                            dialog.dismiss();
+
+                                            logoutButton.setVisibility(View.VISIBLE);
+                                            emailTextView.setVisibility(View.GONE);
+                                            userEmailEditText.setVisibility(View.GONE);
+                                            passwordTextView.setVisibility(View.GONE);
+                                            userPassword.setVisibility(View.GONE);
+                                            loginButton.setVisibility(View.GONE);
+                                            registrationButton.setVisibility(View.GONE);
+
+                                            logoutButton.setOnClickListener(new View.OnClickListener() {
+                                                @Override
+                                                public void onClick(View view) {
+
+                                                    loggedEmail = "" ;
+                                                    loggedIn = 0 ;
+                                                    loggedLocation = "" ;
+                                                    loggedName = "" ;
+                                                    loggedPhone = "" ;
+
+                                                    logoutButton.setVisibility(View.GONE);
+                                                    emailTextView.setVisibility(View.VISIBLE);
+                                                    userEmailEditText.setVisibility(View.VISIBLE);
+                                                    passwordTextView.setVisibility(View.VISIBLE);
+                                                    userPassword.setVisibility(View.VISIBLE);
+                                                    loginButton.setVisibility(View.VISIBLE);
+                                                    registrationButton.setVisibility(View.VISIBLE);
+
+                                                }
+                                            });
+
                                         } else {
                                             Toast.makeText(MainActivity.this, "Email / Password Combination does not exist!.", Toast.LENGTH_SHORT).show();
                                         }
@@ -229,6 +298,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+                    logoutButton.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            emailTextView.setVisibility(View.VISIBLE);
+                            userEmailEditText.setVisibility(View.VISIBLE);
+                            passwordTextView.setVisibility(View.VISIBLE);
+                            userPassword.setVisibility(View.VISIBLE);
+                            registrationButton.setVisibility(View.VISIBLE);
+                            loginButton.setVisibility(View.VISIBLE);
+                            logoutButton.setVisibility(View.GONE);
+                            loggedPhone="";
+                            loggedName="";
+                            loggedLocation="";
+                            loggedIn=0;
+                            loggedEmail="";
+                            Toast.makeText(MainActivity.this, "log out sucessfully ", Toast.LENGTH_SHORT).show();
+                            dialog.dismiss();
+                        }
+
+                    });
 
                 //When click on ImageView
                 userImage.setOnClickListener(new View.OnClickListener() {

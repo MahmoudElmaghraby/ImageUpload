@@ -13,6 +13,7 @@ public class FourButtons extends AppCompatActivity {
     private Toolbar toolbar ;
 
     private Button img1 , img2 , img3 , img4 ;
+    public static String type;
 
 
     @Override
@@ -27,6 +28,8 @@ public class FourButtons extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "Breaking System" ;
+
                 Intent intent = new Intent(FourButtons.this , LeftButton.class);
                 startActivity(intent);
             }
@@ -37,6 +40,8 @@ public class FourButtons extends AppCompatActivity {
         img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "Electrical System";
+
                 Intent intent = new Intent(FourButtons.this , LeftButton.class);
                 startActivity(intent);
             }
@@ -46,6 +51,8 @@ public class FourButtons extends AppCompatActivity {
         img3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "Power-train System" ;
+
                 Intent intent = new Intent(FourButtons.this , LeftButton.class);
                 startActivity(intent);
             }
@@ -55,6 +62,8 @@ public class FourButtons extends AppCompatActivity {
         img4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                type = "Suspension System";
+
                 Intent intent = new Intent(FourButtons.this , LeftButton.class);
                 startActivity(intent);
             }

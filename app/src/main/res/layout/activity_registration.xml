@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/email_text_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -37,6 +38,7 @@
 
 
             <TextView
+                android:id="@+id/password_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -180,6 +182,20 @@
                 android:layout_marginTop="15dp"
                 android:background="@drawable/register_button"
                 android:textColor="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/logout_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Logout"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/register_button"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -15,12 +15,12 @@ import com.squareup.picasso.Picasso;
 
 public class ProductDetails extends AppCompatActivity {
 
-    private Toolbar toolbar ;
+    private Toolbar toolbar;
 
-    private TextView productNameTV , productPriceTV , productTypeTV , productPTNumTV ;
-    private NumberPicker numPicker ;
-    private ImageView productImage ;
-    protected Button productButton ;
+    private TextView productNameTV, productPriceTV, productTypeTV, productPTNumTV;
+    private NumberPicker numPicker;
+    private ImageView productImage;
+    protected Button productButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,29 +55,38 @@ public class ProductDetails extends AppCompatActivity {
         productButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = MainActivity.mrPistonDBRef.push().getKey();
-                Order myOrder = new Order( id ,
-                        MainActivity.productName ,
-                        (float) MainActivity.productPrice ,
-                        MainActivity.loggedLocation ,
-                        MainActivity.loggedPhone ,
-                        MainActivity.loggedEmail ,
-                        MainActivity.productPtNo ,
-                        MainActivity.loggedName ,
-                        (int) numPicker.getValue() ,
-                        (int) 500);
+
+                if (MainActivity.loggedIn == 0) {
+
+                    Toast.makeText(ProductDetails.this, "Please logged in first !", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(ProductDetails.this, MainActivity.class);
+                    startActivity(intent);
+                } else if (MainActivity.loggedIn == 1) {
 
 
-                MainActivity.mrPistonDBRef.child("Orders").child(id).setValue(myOrder);
-                Toast.makeText(ProductDetails.this, "Purchase Successful ", Toast.LENGTH_SHORT).show();
+                    String id = MainActivity.mrPistonDBRef.push().getKey();
+                    Order myOrder = new Order(id,
+                            MainActivity.productName,
+                            (float) MainActivity.productPrice,
+                            MainActivity.loggedLocation,
+                            MainActivity.loggedPhone,
+                            MainActivity.loggedEmail,
+                            MainActivity.productPtNo,
+                            MainActivity.loggedName,
+                            (int) numPicker.getValue(),
+                            (int) 500);
 
-                Intent intent = new Intent(ProductDetails.this , MainActivity.class);
-                startActivity(intent);
 
+                    MainActivity.mrPistonDBRef.child("Orders").child(id).setValue(myOrder);
+                    Toast.makeText(ProductDetails.this, "Purchase Successful ", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(ProductDetails.this, MainActivity.class);
+                    startActivity(intent);
+                }
 
             }
         });
-
 
 
     }

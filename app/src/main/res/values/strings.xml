@@ -4,27 +4,84 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
-    <string-array name="mainStringArray">
+    <string-array name="modelArray">
         <item>model 1</item>
         <item>model 2</item>
         <item>model 3</item>
     </string-array>
 
-    <string-array name="subStringArray1">
-        <item>toyota 1</item>
-        <item>toyota 2</item>
-        <item>toyota 3</item>
+    <string-array name="yearArray">
+        <item>year 1</item>
+        <item>year 2</item>
     </string-array>
 
-    <string-array name="subStringArray2">
-        <item>kin 1</item>
-        <item>kin 2</item>
-        <item>kin 3</item>
-    </string-array>
+    <!--<string-array name="toyotaMainStringArray">-->
+    <!--<item>toyotaModel 1</item>-->
+    <!--<item>toyotaModel 2</item>-->
+    <!--<item>toyotaModel 3</item>-->
+    <!--</string-array>-->
 
-    <string-array name="subStringArray3">
-        <item>hyundai 1</item>
-        <item>hyundai 2</item>
-        <item>hyundai 3</item>
-    </string-array>
+    <!--<string-array name="toyotaSubStringArray1">-->
+    <!--<item>toyotaYear 1_1</item>-->
+    <!--<item>toyotaYear 1_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="toyotaSubStringArray2">-->
+    <!--<item>toyotaYear 2_1</item>-->
+    <!--<item>toyotaYear 2_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="subStringArray3">-->
+    <!--<item>toyotaYear 3_1</item>-->
+    <!--<item>toyotaYear 3_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="toyotaArray1_1">-->
+    <!--<item>toyota1_1</item>-->
+    <!--<item>toyota1_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="toyotaArray1_2">-->
+    <!--<item>toyota2_1</item>-->
+    <!--<item>toyota2_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="toyotaArray1_3">-->
+    <!--<item>toyota3_1</item>-->
+    <!--<item>toyota3_2</item>-->
+    <!--</string-array>-->
+
+
+    <!--<string-array name="kiaArray1_1">-->
+    <!--<item>kia1_1</item>-->
+    <!--<item>kia1_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="kiaArray1_2">-->
+    <!--<item>kia2_1</item>-->
+    <!--<item>kia2_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="kiaArray1_3">-->
+    <!--<item>kia3_1</item>-->
+    <!--<item>kia3_2</item>-->
+    <!--</string-array>-->
+
+
+    <!--<string-array name="hyundaiArray1_1">-->
+    <!--<item>hyundai1_1</item>-->
+    <!--<item>hyundai1_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="hyundaiArray1_2">-->
+    <!--<item>hyundai2_1</item>-->
+    <!--<item>hyundai2_2</item>-->
+    <!--</string-array>-->
+
+    <!--<string-array name="hyundaiArray1_3">-->
+    <!--<item>hyundai3_1</item>-->
+    <!--<item>hyundai3_2</item>-->
+    <!--</string-array>-->
+
+
 </resources>

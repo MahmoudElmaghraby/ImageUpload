@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this , LeftButton.class);
+                Intent intent = new Intent(MainActivity.this , Lubricants.class);
                 startActivity(intent);
             }
         });
@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+
+//            finish();
+//            System.exit(0);
+
         }
     }
 
@@ -497,4 +501,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
+
 }

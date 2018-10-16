@@ -56,7 +56,6 @@ public class LeftButton extends AppCompatActivity {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setmKey(postSnapshot.getKey());
-//                    Toast.makeText(ImagesActivity.this, "Key is : "+ postSnapshot.getKey() , Toast.LENGTH_SHORT).show();
 
                     mUploads.add(upload);
                 }
@@ -97,5 +96,7 @@ public class LeftButton extends AppCompatActivity {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBListener);
     }
+
+
 }
 

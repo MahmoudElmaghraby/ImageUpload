@@ -44,7 +44,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="100dp"
                     android:background="@drawable/custome_buttons"
-                    android:hint="Find needed spare parts here.."
+                    android:hint="@string/find_needed_spare_parts_here"
                     android:inputType="text"
                     android:textAlignment="center"
                     android:textColor="#4b4c4c"
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="160dp"
-                    android:text="WELCOME TO "
+                    android:text="@string/welcome_to"
                     android:textColor="#4b4c4c"
                     android:textSize="15sp"
                     app:fontFamily="@font/lato" />
@@ -94,7 +94,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="190dp"
-                    android:text="NOW YOU CAN PURCHASE EASILY !"
+                    android:text="@string/now_you_can_purchase_easily"
                     android:textColor="#4b4c4c"
                     android:textSize="8sp"
                     app:fontFamily="@font/lato" />
@@ -139,7 +139,7 @@
                     android:layout_below="@+id/left_button"
                     android:layout_toLeftOf="@+id/search_bar"
                     android:layout_toStartOf="@+id/search_bar"
-                    android:text="LUBRICANTS"
+                    android:text="@string/lubricants"
                     android:textColor="#FFFFFF"
                     app:fontFamily="@font/lato" />
 
@@ -148,7 +148,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/left_button"
                     android:layout_centerHorizontal="true"
-                    android:text="SPARE PARTS"
+                    android:text="@string/spare_parts"
                     android:textColor="#FFFFFF"
                     app:fontFamily="@font/lato" />
 
@@ -158,7 +158,7 @@
                     android:layout_below="@+id/left_button"
                     android:layout_toEndOf="@+id/search_bar"
                     android:layout_toRightOf="@+id/search_bar"
-                    android:text="MAINTENANCE"
+                    android:text="@string/maintenance"
                     android:textColor="#FFFFFF"
                     app:fontFamily="@font/lato" />
 
@@ -181,7 +181,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="330dp"
-                    android:text="ABOUT"
+                    android:text="@string/about"
                     android:textColor="#FFFFFF"
                     android:textSize="20sp"
                     app:fontFamily="@font/lato" />
@@ -194,7 +194,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
                     android:lineSpacingExtra="1sp"
-                    android:text="Mr. Piston aims to facilitate the market of automobiles' spare parts for his clients who can get all spare parts for their cars with many features such as our attractive prices, our delivery services, rapid response with professional digital marketing technology by using our mobile application."
+                    android:text="@string/about_long_text"
                     android:textAlignment="center"
                     android:textColor="#4b4c4c"
                     android:textSize="15sp"
@@ -334,7 +334,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#1b1b1b"
-                    android:text="USER NAME"
+                    android:text="@string/user_name"
                     android:textColor="#960202"
                     android:textSize="15sp" />
 
@@ -343,7 +343,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#1b1b1b"
-                    android:text="LOCATION"
+                    android:text="@string/location"
                     android:textColor="#960202"
                     android:textSize="15sp" />
 
@@ -352,7 +352,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="#1b1b1b"
-                    android:text="CALL US"
+                    android:text="@string/call_us"
                     android:textColor="#960202"
                     android:textSize="15sp" />
 

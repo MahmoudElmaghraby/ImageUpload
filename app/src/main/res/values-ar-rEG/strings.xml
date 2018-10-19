@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_automobile_brand">"اختر نوع السياره "</string>
+    <string name="ok">حسنا</string>
+    <string name="choose_system">اختر النظام</string>
+    <string name="to_select_spare_parts_you_need">"لأختيار قطع الغيار المطلوبه "</string>
+    <string name="braking_sys">نظام الفرامل</string>
+    <string name="electrical_sys">نظام الكهرباء</string>
+    <string name="power_train_sys">نظام القوه</string>
+    <string name="suspension_sys">نظام التعليق (العفشه)</string>
+    <string name="lubricants">زيوت</string>
+    <string name="coming_soon">لاحقا</string>
+    <string name="find_needed_spare_parts_here">"جد قطع الغيار التى تريد "</string>
+    <string name="welcome_to">اهلا فى</string>
+    <string name="now_you_can_purchase_easily">الأن تستطيع الشراء بسهوله</string>
+    <string name="spare_parts">قطع الغيار</string>
+    <string name="maintenance">صيانه</string>
+    <string name="about">عنا</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="location">الموقع</string>
+    <string name="call_us">اتصل بنا</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="product_price">سعر المنتج</string>
+    <string name="product_type">نوع المنتج</string>
+    <string name="product_part_number">رقم المسلسل للمنتج</string>
+    <string name="test">اختبار</string>
+    <string name="write_your_e_mail_here">ادخل بريدك الالكترونى…</string>
+    <string name="write_password_here">ادخل الرقم السرى…</string>
+    <string name="write_your_user_name_here">ادخل اسم المستخدم…</string>
+    <string name="write_your_phone_number_here">ادخل رقم تليفونك…</string>
+    <string name="write_your_location_here">ادخل موقعك…</string>
+    <string name="add_your_profile_picture">اضف صورتك</string>
+    <string name="register">تسجيل</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="contact_us">تواصل معنا</string>
+</resources>

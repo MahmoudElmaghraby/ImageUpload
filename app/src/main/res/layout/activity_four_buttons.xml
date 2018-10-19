@@ -214,7 +214,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="CHOOSE SYSTEM"
+            android:text="@string/choose_system"
             android:textColor="@android:color/white"
             android:textSize="40sp" />
 
@@ -224,7 +224,7 @@
             android:gravity="center"
             android:textStyle="bold"
             android:layout_marginBottom="20dp"
-            android:text="TO SELECT SPARE PARTS YOU NEED"
+            android:text="@string/to_select_spare_parts_you_need"
             android:textSize="15sp" />
 
         <LinearLayout
@@ -258,7 +258,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingLeft="20dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -266,7 +268,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="30dp"
-                android:text="BRAKING    SYS."
+                android:text="@string/braking_sys"
                 android:textSize="15sp"
 
                 />
@@ -277,7 +279,7 @@
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:text="ELECTRICAL SYS." />
+                android:text="@string/electrical_sys" />
 
         </LinearLayout>
 
@@ -312,7 +314,9 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:paddingLeft="20dp"
-            android:paddingTop="8dp">
+            android:paddingTop="8dp"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -320,7 +324,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="20dp"
-                android:text="POWER-TRAIN SYS."
+                android:text="@string/power_train_sys"
                 android:textSize="15sp" />
 
             <TextView
@@ -330,7 +334,7 @@
                 android:layout_gravity="center_horizontal"
                 android:textStyle="bold"
                 android:layout_marginHorizontal="20dp"
-                android:text="SUSPENSION SYS." />
+                android:text="@string/suspension_sys" />
 
         </LinearLayout>
 

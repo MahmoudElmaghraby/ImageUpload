@@ -1,8 +1,48 @@
 <resources>
-    <string name="app_name">MR. PISTON</string>
+    <string name="app_name" translatable="false">MR. PISTON</string>
 
-    <string name="open">Open</string>
-    <string name="close">Close</string>
+    <string name="open" translatable="false">Open</string>
+    <string name="close" translatable="false">Close</string>
+
+
+    <string name="select_automobile_brand">SELECT AUTOMOBILE BRAND</string>
+    <string name="ok">OK</string>
+    <string name="choose_system">CHOOSE SYSTEM</string>
+    <string name="to_select_spare_parts_you_need">TO SELECT SPARE PARTS YOU NEED</string>
+    <string name="braking_sys">BRAKING SYS.</string>
+    <string name="electrical_sys">ELECTRICAL SYS.</string>
+    <string name="power_train_sys">POWER-TRAIN SYS.</string>
+    <string name="suspension_sys">SUSPENSION SYS.</string>
+    <string name="lubricants">LUBRICANTS</string>
+    <string name="coming_soon">COMING SOON</string>
+    <string name="find_needed_spare_parts_here">Find needed spare parts here..</string>
+    <string name="welcome_to">WELCOME TO</string>
+    <string name="now_you_can_purchase_easily">NOW YOU CAN PURCHASE EASILY !</string>
+    <string name="spare_parts">SPARE PARTS</string>
+    <string name="maintenance">MAINTENANCE</string>
+    <string name="about">ABOUT</string>
+    <string name="about_long_text" translatable="false">Mr. Piston aims to facilitate the market of automobiles\' spare parts for his clients who can get all spare parts for their cars with many features such as our attractive prices, our delivery services, rapid response with professional digital marketing technology by using our mobile application.</string>
+    <string name="user_name">USER NAME</string>
+    <string name="location">LOCATION</string>
+    <string name="call_us">CALL US</string>
+    <string name="product_name">Product Name :</string>
+    <string name="product_price">Product Price :</string>
+    <string name="product_type">Product Type :</string>
+    <string name="product_part_number">Product Part Number :</string>
+    <string name="test">test</string>
+    <string name="write_your_e_mail_here">Write your e-mail here …</string>
+    <string name="write_password_here">Write password here …</string>
+    <string name="write_your_user_name_here">Write your user name here …</string>
+    <string name="write_your_phone_number_here">Write your phone number here …</string>
+    <string name="write_your_location_here">Write your location here …</string>
+    <string name="add_your_profile_picture">Add your profile picture</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="this_is_for_name_of_left_text_view" translatable="false">this is for name of left text view</string>
+    <string name="this_is_for_description_of_left_text_view" translatable="false">this is for description of left text view</string>
+
 
     <string-array name="modelArray">
         <item>model 1</item>

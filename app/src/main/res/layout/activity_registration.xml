@@ -22,9 +22,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Write your e-mail here ..."
+                android:text="@string/write_your_e_mail_here"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
 
             <EditText
                 android:id="@+id/email_EditText"
@@ -43,9 +44,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
-                android:text="Write password here ..."
+                android:text="@string/write_password_here"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
 
             <EditText
                 android:id="@+id/password_EditText"
@@ -65,9 +67,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:visibility="gone"
-                android:text="Write your user name here ..."
+                android:text="@string/write_your_user_name_here"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
 
             <EditText
                 android:id="@+id/user_name_editText"
@@ -88,9 +91,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:visibility="gone"
-                android:text="Write your phone number here ..."
+                android:text="@string/write_your_phone_number_here"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
 
             <EditText
                 android:id="@+id/phone_number_EditText"
@@ -111,9 +115,10 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:visibility="gone"
-                android:text="Write your location here ..."
+                android:text="@string/write_your_location_here"
                 android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
 
             <EditText
                 android:id="@+id/location_editText"
@@ -138,7 +143,7 @@
                 android:id="@+id/image_textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add your profile picture"
+                android:text="@string/add_your_profile_picture"
                 android:textSize="15sp"
                 android:textColor="@android:color/white"
                 android:layout_marginTop="5dp"
@@ -164,7 +169,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Register"
+                android:text="@string/register"
                 android:textAllCaps="false"
                 android:textSize="15sp"
                 android:layout_marginTop="15dp"
@@ -176,7 +181,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Login"
+                android:text="@string/login"
                 android:textAllCaps="false"
                 android:textSize="15sp"
                 android:layout_marginTop="15dp"
@@ -188,7 +193,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Logout"
+                    android:text="@string/logout"
                     android:textAllCaps="false"
                     android:textSize="15sp"
                     android:layout_marginTop="15dp"

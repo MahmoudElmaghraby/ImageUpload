@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="10dp">
@@ -21,7 +22,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/image_view_upload"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/image_view_upload">
 
             <TextView
                 android:id="@+id/text_view_name"
@@ -30,7 +32,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
-                android:text="this is for name of left text view"
+                android:text="@string/this_is_for_name_of_left_text_view"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:fontFamily="@font/lato" />
@@ -43,9 +45,11 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@+id/image_view_upload"
-                android:text="this is for description of  left text view"
+                android:text="@string/this_is_for_description_of_left_text_view"
                 android:textSize="20sp"
-                app:fontFamily="@font/lato" />
+                app:fontFamily="@font/lato"
+                android:layout_toEndOf="@+id/image_view_upload"
+                tools:ignore="ObsoleteLayoutParam" />
 
             <LinearLayout
                 android:layout_width="wrap_content"

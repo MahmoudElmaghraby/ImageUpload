@@ -45,7 +45,7 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/toyota"/>
+                android:src="@drawable/xtoyota"/>
 
 
             <ImageView
@@ -53,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/kia"/>
+                android:src="@drawable/xkia"/>
 
 
             <ImageView
@@ -61,7 +61,7 @@
                 android:layout_width="0dp"
                 android:layout_height="90dp"
                 android:layout_weight="1"
-                android:src="@drawable/app_icon"/>
+                android:src="@drawable/xhyundai"/>
 
 
 

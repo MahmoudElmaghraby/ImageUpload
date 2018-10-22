@@ -34,4 +34,16 @@
     <string name="login">تسجيل الدخول</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="contact_us">تواصل معنا</string>
+
+    <string-array name="modelArray">
+        <item>النوع 1</item>
+        <item>النوع 2</item>
+        <item>النوع 3</item>
+    </string-array>
+
+    <string-array name="yearArray">
+        <item>السنه 1</item>
+        <item>السنه 2</item>
+    </string-array>
+
 </resources>

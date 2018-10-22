@@ -240,7 +240,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_launcher_background" />
+                android:background="@drawable/xbraking_sys" />
 
             <Button
                 android:id="@+id/img2"
@@ -249,7 +249,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_launcher_background" />
+                android:background="@drawable/app_icon" />
 
         </LinearLayout>
 
@@ -296,7 +296,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_launcher_background" />
+                android:background="@drawable/xengine_and_transmission_sys" />
 
             <Button
                 android:id="@+id/img4"
@@ -305,7 +305,7 @@
                 android:layout_weight="1"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginHorizontal="30dp"
-                android:background="@drawable/ic_launcher_background" />
+                android:background="@drawable/app_icon" />
 
         </LinearLayout>
 

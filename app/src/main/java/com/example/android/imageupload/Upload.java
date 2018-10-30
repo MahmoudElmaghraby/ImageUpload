@@ -17,11 +17,14 @@ public class Upload {
     private String imageUrl;
     private String mKey;
 
+    private String mCountry ;
+    private String nameAR ;
+
     public Upload() {
         //empty constructor needed
     }
 
-    public Upload(String name, String mModel, String mSubModel, String mProvider, int mYear, String mPartNo, String mCat, float mBPrice, float mSPrice, float mProfit, String imageUrl) {
+    public Upload(String name, String mModel, String mSubModel, String mProvider, int mYear, String mPartNo, String mCat, float mBPrice, float mSPrice, float mProfit, String imageUrl , String mCountry , String nameAR) {
         this.name = name;
         this.mModel = mModel;
         this.mSubModel = mSubModel;
@@ -33,6 +36,8 @@ public class Upload {
         this.mSPrice = mSPrice;
         this.mProfit = mProfit;
         this.imageUrl = imageUrl;
+        this.mCountry = mCountry;
+        this.nameAR = nameAR;
     }
 
     public String getmType() {
@@ -139,6 +144,14 @@ public class Upload {
         this.mKey = mKey;
     }
 
+
+    public String getmCountry() {
+        return mCountry;
+    }
+
+    public String getNameAR() {
+        return nameAR;
+    }
 
     //    public Upload(String name, String imageUrl) {
 //        if (name.trim().equals("")) {

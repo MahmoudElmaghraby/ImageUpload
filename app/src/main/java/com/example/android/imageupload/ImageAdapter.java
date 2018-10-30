@@ -79,8 +79,8 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
             }
         } else {
             if (partbrand.equals(Choose.brand) &&
-                    partmodel.equals(Choose.model) &&
-                    partyear == Choose.year &&
+                    partmodel.equals(Choose.chosenModel) &&
+                    partyear == Choose.chosenYear &&
                     partType.equals(FourButtons.type)) {
 
                 Picasso.with(mContext)

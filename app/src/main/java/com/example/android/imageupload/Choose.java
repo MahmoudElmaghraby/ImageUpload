@@ -5,13 +5,21 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.example.android.imageupload.MainActivity.mrPistonDBRef;
 
 public class Choose extends AppCompatActivity {
 
@@ -23,8 +31,8 @@ public class Choose extends AppCompatActivity {
 
 //    private LinearLayout sup1, sup1_1;
 
-    public static String brand = "Toyota" , model = "Corolla" ;
-    public static int year = 2005;
+    public static String brand = "Toyota" , model , chosenModel  ;
+    public static int year , chosenYear ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +53,7 @@ public class Choose extends AppCompatActivity {
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                chosenYear =  Integer.parseInt(yearSpinner.getSelectedItem().toString());
                 Intent intent = new Intent(Choose.this , FourButtons.class);
                 startActivity(intent);
             }
@@ -61,18 +70,25 @@ public class Choose extends AppCompatActivity {
         toyotaImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Toyota" ;
                 modelSpinner.setVisibility(View.VISIBLE);
                 yearSpinner.setVisibility(View.VISIBLE);
                 okButton.setVisibility(View.VISIBLE);
+
+                getModelsFromDatabase();
+
             }
         });
 
         kiaImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Kia" ;
                 modelSpinner.setVisibility(View.VISIBLE);
                 yearSpinner.setVisibility(View.VISIBLE);
                 okButton.setVisibility(View.VISIBLE);
+
+                getModelsFromDatabase();
 
             }
         });
@@ -80,11 +96,44 @@ public class Choose extends AppCompatActivity {
         hyundaiImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                brand = "Hyundai" ;
                 modelSpinner.setVisibility(View.VISIBLE);
                 yearSpinner.setVisibility(View.VISIBLE);
                 okButton.setVisibility(View.VISIBLE);
+
+                getModelsFromDatabase();
             }
         });
+
+
+        //L7AD HENAAAAA !!!!!!!!!!!!!!
+        modelSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                chosenModel = modelSpinner.getSelectedItem().toString();
+                getYearFromDatabase();
+                }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+//        yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+//                chosenYear = (Integer) yearSpinner.getSelectedItem();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> adapterView) {
+//
+//            }
+//        });
+
+
+
 
 
 //
@@ -694,4 +743,63 @@ public class Choose extends AppCompatActivity {
 //        });
 
     }
+
+    public void getModelsFromDatabase(){
+
+        mrPistonDBRef.child("Cars").child(brand).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                final List<String> Cars = new ArrayList<String>();
+
+                for (DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
+                    String carModel = areaSnapshot.getKey();
+                    Cars.add(carModel);
+                }
+
+                ArrayAdapter<String> areasAdapter = new ArrayAdapter<String>(Choose.this, android.R.layout.simple_spinner_item, Cars);
+                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                modelSpinner.setAdapter(areasAdapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+    }
+
+
+    public void getYearFromDatabase(){
+
+
+        //HAGARRAB MN HNA!!!!!!!!!!!!!!222222  Bageeb Car Years bi dih!   22222222222222
+
+        mrPistonDBRef.child("Cars").child(brand).child(chosenModel).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                final List<String> yearss = new ArrayList<>();
+
+                for (DataSnapshot areaSnapshot: dataSnapshot.getChildren()) {
+                    String carYear = areaSnapshot.getKey();
+                    yearss.add(carYear);
+                }
+
+                ArrayAdapter<String> areasAdapter = new ArrayAdapter<>(Choose.this, android.R.layout.simple_spinner_item, yearss);
+                areasAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                yearSpinner.setAdapter(areasAdapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError2) {
+
+            }
+        });
+
+
+        //L7AD HENAAAAA !!!!!!!!!!!!!!
+
+    }
+
 }

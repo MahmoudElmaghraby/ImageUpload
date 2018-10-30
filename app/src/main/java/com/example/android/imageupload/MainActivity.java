@@ -2,9 +2,11 @@ package com.example.android.imageupload;
 
 import android.app.Dialog;
 import android.content.ContentResolver;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -41,11 +43,13 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
 
-    public static int loggedIn = 0 ;
+    public static int loggedIn = 0;
     public static String loggedPhone;
     public static String loggedName;
     public static String loggedLocation;
@@ -55,15 +59,16 @@ public class MainActivity extends AppCompatActivity {
     public static float productPrice;
     public static String productType;
     public static String productPtNo;
-    public static String productImage ;
+    public static String productImage;
+    public static String productCountry;
 
-    public static String searchBarText ;
+    public static String searchBarText;
 
-    private TextView userNameTv, phoneNumberTv, locatioTv, imageTv , emailTextView , passwordTextView;
+    private TextView userNameTv, phoneNumberTv, locatioTv, imageTv, emailTextView, passwordTextView;
     private DrawerLayout drawer;
     private Query query;
-    private EditText userNameEditText, userPassword, userEmailEditText, userPhoneNumber, userLocation , searchBar;
-    private Button registrationButton, loginButton, logoutButton , leftButton, middleButton, rightButton , searchButton;
+    private EditText userNameEditText, userPassword, userEmailEditText, userPhoneNumber, userLocation, searchBar;
+    private Button registrationButton, loginButton, logoutButton, leftButton, middleButton, rightButton, searchButton;
     private Users user;
     private FirebaseDatabase database;
     public static DatabaseReference mrPistonDBRef;
@@ -81,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+       // String language = Locale.getDefault().getDisplayLanguage();
 
         // to not popup the keyboard when the app begin
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -109,17 +116,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                searchBarText = searchBar.getText().toString() ;
-                searchbarpressed = true;
-                Intent intent = new Intent(MainActivity.this , LeftButton.class);
-                startActivity(intent);
+                if (isNetworkConnected()) {
+
+                    searchBarText = searchBar.getText().toString();
+                    searchbarpressed = true;
+                    Intent intent = new Intent(MainActivity.this, LeftButton.class);
+                    startActivity(intent);
+
+                } else {
+                    Toast.makeText(MainActivity.this, "Please check your internet connection", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this , Lubricants.class);
+                Intent intent = new Intent(MainActivity.this, Lubricants.class);
                 startActivity(intent);
             }
         });
@@ -127,7 +140,15 @@ public class MainActivity extends AppCompatActivity {
         middleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this , Choose.class);
+                Intent intent = new Intent(MainActivity.this, Choose.class);
+                startActivity(intent);
+            }
+        });
+
+        rightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this , Maintenance.class);
                 startActivity(intent);
             }
         });
@@ -184,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
                 logoutButton = dialog.findViewById(R.id.logout_button);
                 userImage = dialog.findViewById(R.id.user_image);
                 mProgressBar = dialog.findViewById(R.id.progress_bar);
-                if (loggedIn == 1){
+                if (loggedIn == 1) {
                     logoutButton.setVisibility(View.VISIBLE);
                     emailTextView.setVisibility(View.GONE);
                     userEmailEditText.setVisibility(View.GONE);
@@ -192,8 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     userPassword.setVisibility(View.GONE);
                     loginButton.setVisibility(View.GONE);
                     registrationButton.setVisibility(View.GONE);
-                }
-                else{
+                } else {
                     logoutButton.setVisibility(View.GONE);
                     emailTextView.setVisibility(View.VISIBLE);
                     userEmailEditText.setVisibility(View.VISIBLE);
@@ -266,11 +286,11 @@ public class MainActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onClick(View view) {
 
-                                                    loggedEmail = "" ;
-                                                    loggedIn = 0 ;
-                                                    loggedLocation = "" ;
-                                                    loggedName = "" ;
-                                                    loggedPhone = "" ;
+                                                    loggedEmail = "";
+                                                    loggedIn = 0;
+                                                    loggedLocation = "";
+                                                    loggedName = "";
+                                                    loggedPhone = "";
 
                                                     logoutButton.setVisibility(View.GONE);
                                                     emailTextView.setVisibility(View.VISIBLE);
@@ -302,26 +322,26 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                    logoutButton.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            emailTextView.setVisibility(View.VISIBLE);
-                            userEmailEditText.setVisibility(View.VISIBLE);
-                            passwordTextView.setVisibility(View.VISIBLE);
-                            userPassword.setVisibility(View.VISIBLE);
-                            registrationButton.setVisibility(View.VISIBLE);
-                            loginButton.setVisibility(View.VISIBLE);
-                            logoutButton.setVisibility(View.GONE);
-                            loggedPhone="";
-                            loggedName="";
-                            loggedLocation="";
-                            loggedIn=0;
-                            loggedEmail="";
-                            Toast.makeText(MainActivity.this, "log out sucessfully ", Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
+                logoutButton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        emailTextView.setVisibility(View.VISIBLE);
+                        userEmailEditText.setVisibility(View.VISIBLE);
+                        passwordTextView.setVisibility(View.VISIBLE);
+                        userPassword.setVisibility(View.VISIBLE);
+                        registrationButton.setVisibility(View.VISIBLE);
+                        loginButton.setVisibility(View.VISIBLE);
+                        logoutButton.setVisibility(View.GONE);
+                        loggedPhone = "";
+                        loggedName = "";
+                        loggedLocation = "";
+                        loggedIn = 0;
+                        loggedEmail = "";
+                        Toast.makeText(MainActivity.this, "log out sucessfully ", Toast.LENGTH_SHORT).show();
+                        dialog.dismiss();
+                    }
 
-                    });
+                });
 
                 //When click on ImageView
                 userImage.setOnClickListener(new View.OnClickListener() {
@@ -474,7 +494,7 @@ public class MainActivity extends AppCompatActivity {
 
                             Toast.makeText(MainActivity.this, "Upload Successful", Toast.LENGTH_LONG).show();
 
-                            UploadImages upload = new UploadImages("My Name ","My Description",taskSnapshot.getUploadSessionUri().toString());
+                            UploadImages upload = new UploadImages("My Name ", "My Description", taskSnapshot.getUploadSessionUri().toString());
                             //String uploadId = mrPistonDBRef.push().getKey();
                             mrPistonDBRef.child(id).setValue(upload);
 
@@ -502,6 +522,12 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public boolean isNetworkConnected() {
 
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connectivityManager != null;
+        return connectivityManager.getActiveNetworkInfo() != null;
+
+    }
 
 }

@@ -27,44 +27,11 @@
 
                 <ImageView
                     android:id="@+id/product_image_view"
-                    android:layout_width="150dp"
+                    android:layout_width="match_parent"
                     android:layout_height="150dp"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
                     android:src="@mipmap/ic_launcher" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:orientation="horizontal"
-                    android:padding="8dp">
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="@android:color/white"
-                        android:fontFamily="@font/lato"
-                        android:gravity="center"
-                        android:paddingEnd="30dp"
-                        android:paddingRight="30dp"
-                        android:paddingTop="5dp"
-                        android:text="P.P Number :"
-                        android:textSize="12sp"
-                        tools:ignore="RtlSymmetry" />
-
-                    <TextView
-                        android:id="@+id/product_PTNum_text_view"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:background="#b00032"
-                        android:gravity="center"
-                        android:textColor="@android:color/white" />
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -98,6 +65,42 @@
                         android:textColor="@android:color/white" />
 
                 </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:fontFamily="@font/lato"
+                        android:gravity="center"
+                        android:paddingEnd="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="5dp"
+                        android:text="Product Country :"
+                        android:textSize="12sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/product_country_text_view"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:background="#b00032"
+                        android:gravity="center"
+                        android:textColor="@android:color/white" />
+
+                </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -225,6 +228,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:visibility="gone"
                     android:padding="8dp">
 
                     <TextView

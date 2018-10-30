@@ -1,18 +1,21 @@
 package com.example.android.imageupload;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class FourButtons extends AppCompatActivity {
 
-    private Toolbar toolbar ;
+    private Toolbar toolbar;
 
-    private Button img1 , img2 , img3 , img4 ;
+    private Button img1, img2, img3, img4;
     public static String type;
 
 
@@ -28,10 +31,17 @@ public class FourButtons extends AppCompatActivity {
         img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                type = "Breaking System" ;
+                type = "Braking System";
 
-                Intent intent = new Intent(FourButtons.this , LeftButton.class);
-                startActivity(intent);
+                if (isNetworkConnected()) {
+
+                    Intent intent = new Intent(FourButtons.this, LeftButton.class);
+                    startActivity(intent);
+
+                }else {
+
+                    Toast.makeText(FourButtons.this, "Please check your internet connection ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -42,8 +52,15 @@ public class FourButtons extends AppCompatActivity {
             public void onClick(View view) {
                 type = "Electrical System";
 
-                Intent intent = new Intent(FourButtons.this , LeftButton.class);
-                startActivity(intent);
+                if (isNetworkConnected()) {
+
+                    Intent intent = new Intent(FourButtons.this, LeftButton.class);
+                    startActivity(intent);
+
+                }else {
+
+                    Toast.makeText(FourButtons.this, "Please check your internet connection ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -51,10 +68,17 @@ public class FourButtons extends AppCompatActivity {
         img3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                type = "Power-train System" ;
+                type = "Power-train System";
 
-                Intent intent = new Intent(FourButtons.this , LeftButton.class);
-                startActivity(intent);
+                if (isNetworkConnected()) {
+
+                    Intent intent = new Intent(FourButtons.this, LeftButton.class);
+                    startActivity(intent);
+
+                }else {
+
+                    Toast.makeText(FourButtons.this, "Please check your internet connection ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -64,8 +88,15 @@ public class FourButtons extends AppCompatActivity {
             public void onClick(View view) {
                 type = "Suspension System";
 
-                Intent intent = new Intent(FourButtons.this , LeftButton.class);
-                startActivity(intent);
+                if (isNetworkConnected()) {
+
+                    Intent intent = new Intent(FourButtons.this, LeftButton.class);
+                    startActivity(intent);
+
+                }else {
+
+                    Toast.makeText(FourButtons.this, "Please check your internet connection ", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -108,7 +139,14 @@ public class FourButtons extends AppCompatActivity {
 //        });
 
 
+    }
 
+    public boolean isNetworkConnected() {
+
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connectivityManager != null;
+        return connectivityManager.getActiveNetworkInfo() != null;
 
     }
+
 }

@@ -81,6 +81,7 @@ public class LeftButton extends AppCompatActivity {
                 MainActivity.productType = currentUpload.getmType();
                 MainActivity.productPrice = currentUpload.getmSPrice();
                 MainActivity.productImage = currentUpload.getImageUrl();
+                MainActivity.productCountry = currentUpload.getmCountry();
 
                 Intent intent = new Intent(LeftButton.this, ProductDetails.class);
                 startActivity(intent);

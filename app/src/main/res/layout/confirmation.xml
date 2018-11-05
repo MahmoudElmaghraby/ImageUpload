@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:radius="50dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/confirmation_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Name"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/confirmation_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Type"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/confirmation_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Quantity"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
+
+            <TextView
+                android:id="@+id/confirmation_order_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:text="Order Price"
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/confirmation_cancel_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/register_button"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/confirmation_confirm_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Confirm"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/register_button"
+                    android:textColor="@android:color/white"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

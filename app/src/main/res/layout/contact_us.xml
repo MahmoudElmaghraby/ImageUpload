@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#a4a4a4"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ContactWithUs">
 
     <TextView
         android:layout_width="match_parent"
@@ -24,21 +26,21 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/facebook_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/facebook1" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/instagram_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/instagram1" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/youtube_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
@@ -46,14 +48,14 @@
             />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/linkedin_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
             android:background="@drawable/linkedin1" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/twitter_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"

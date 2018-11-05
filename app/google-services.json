@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:190867701206:android:bc4208b893117eb8",
         "android_client_info": {
-          "package_name": "com.example.android.imageupload"
+          "package_name": "com.mrpistonapp.android.imageupload"
         }
       },
       "oauth_client": [
@@ -41,7 +41,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:190867701206:android:a45272163ff1977b",
         "android_client_info": {
-          "package_name": "com.example.android.mrpiston"
+          "package_name": "com.mrpistonapp.android.imageupload"
         }
       },
       "oauth_client": [
@@ -49,7 +49,7 @@
           "client_id": "190867701206-ft7ha55uu6dp49u5uusfg23gkosdblr7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.android.mrpiston",
+            "package_name": "com.mrpistonapp.android.imageupload",
             "certificate_hash": "ba7d144a5d70f3c364dbc5246e144fba2f71e099"
           }
         },
@@ -85,7 +85,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:190867701206:android:5b1ad15e125c1542",
         "android_client_info": {
-          "package_name": "com.example.android.uploadimagestomrpiston"
+          "package_name": "com.mrpistonapp.android.imageupload"
         }
       },
       "oauth_client": [

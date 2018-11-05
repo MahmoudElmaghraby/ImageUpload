@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.android.imageupload">
+    package="com.mrpistonapp.android.imageupload">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -46,9 +46,15 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
-        <activity android:name=".Maintenance"
+        <activity
+            android:name=".Maintenance"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".ContactWithUs">
+
         </activity>
     </application>
 

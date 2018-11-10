@@ -20,6 +20,9 @@ import java.util.List;
 public class LeftButton extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ImageAdapter mAdapter;
+    private String nameAchieved;
+    private String string1 , string2 , string4 ;
+    private int string3;
 
     private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
@@ -52,10 +55,25 @@ public class LeftButton extends AppCompatActivity {
                 mUploads.clear();
 
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    nameAchieved = postSnapshot.child("mName").toString();
                     Upload upload = postSnapshot.getValue(Upload.class);
                     upload.setmKey(postSnapshot.getKey());
+                    string1 = upload.getmModel();
+                    string2 = upload.getmSubModel();
+                    string3 = upload.getmYear();
+                    string4 = upload.getmCat();
 
-                    mUploads.add(upload);
+                    if(string1.equals(Choose.brand)
+                            &&
+                            string2.equals(Choose.chosenModel)
+                            &&
+                            string3 == Choose.chosenYear
+                            &&
+                            string4.equals(FourButtons.type)) {
+//                        Upload upload = postSnapshot.getValue(Upload.class);
+                        mUploads.add(upload);
+                    }
+
                 }
 
                 mAdapter.notifyDataSetChanged();

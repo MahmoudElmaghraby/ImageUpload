@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+
 public class FourButtons extends AppCompatActivity {
 
     private Toolbar toolbar;
@@ -17,6 +21,7 @@ public class FourButtons extends AppCompatActivity {
     private Button img1, img2, img3, img4;
     public static String type;
 
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +30,12 @@ public class FourButtons extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        MobileAds.initialize(this, "ca-app-pub-2249470881400414~4934420923");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         img1 = findViewById(R.id.img1);
         img1.setOnClickListener(new View.OnClickListener() {

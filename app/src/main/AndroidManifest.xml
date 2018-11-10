@@ -15,6 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2249470881400414~4934420923"/>
+
         <activity
             android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">

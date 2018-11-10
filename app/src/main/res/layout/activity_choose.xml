@@ -24,6 +24,16 @@
         android:padding="8dp"
         android:layout_alignParentLeft="true">
 
+
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-2249470881400414/3510901888"/>
+
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,6 +41,7 @@
             android:textSize="25sp"
             android:gravity="center"
             android:layout_marginBottom="40dp"
+            android:layout_marginTop="20dp"
             android:textColor="@android:color/white"/>
 
 

@@ -61,8 +61,8 @@
             android:layout_margin="10dp"
             android:background="@drawable/tweeter1" />
 
-
     </LinearLayout>
+
 
     <TextView
         android:layout_width="match_parent"
@@ -73,6 +73,5 @@
         android:text="ALL COPYRIGHTS FOR MR. PISTON ® ARE RESERVED."
         android:textColor="#4b4c4c"
         android:textSize="12sp" />
-
 
 </LinearLayout>

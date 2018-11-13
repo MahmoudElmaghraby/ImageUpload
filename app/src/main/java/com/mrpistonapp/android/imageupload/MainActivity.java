@@ -417,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * To ad user in firebase
+     * To add user in firebase
      */
     public void addUser() {
         userName = userNameEditText.getText().toString().trim();

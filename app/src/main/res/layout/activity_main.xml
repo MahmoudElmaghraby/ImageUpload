@@ -173,21 +173,6 @@
                     ads:adUnitId="ca-app-pub-2249470881400414/3510901888"/>
 
 
-                <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignTop="@+id/button9"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_marginTop="50dp"-->
-                <!--android:background="#1b1b1b"-->
-                <!--android:gravity="center_horizontal"-->
-                <!--android:text="ALL COPYRIGHTS FOR MR. PISTON ® ARE RESERVED."-->
-                <!--android:textColor="#4b4c4c"-->
-                <!--android:textSize="12sp" />-->
-
-
-
-
                 <TextView
                     android:id="@+id/About"
                     android:layout_width="wrap_content"
@@ -224,83 +209,6 @@
                     android:layout_alignParentStart="true" />
 
 
-
-
-
-                <!--<TextView-->
-                <!--android:id="@+id/contact"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_alignTop="@+id/kbeer"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_marginTop="135dp"-->
-                <!--android:text="CONTACT US"-->
-                <!--android:textColor="#FFFFFF"-->
-                <!--android:textSize="16sp"-->
-                <!--app:fontFamily="@font/lato" />-->
-
-
-                <!--<Button-->
-                <!--android:id="@+id/button7"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_alignTop="@+id/contact"-->
-                <!--android:layout_marginEnd="20dp"-->
-                <!--android:layout_marginRight="20dp"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_toLeftOf="@+id/button8"-->
-                <!--android:layout_toStartOf="@+id/button8"-->
-                <!--android:background="@drawable/facebook1" />-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button8"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_alignTop="@+id/contact"-->
-                <!--android:layout_marginEnd="20dp"-->
-                <!--android:layout_marginRight="20dp"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_toLeftOf="@+id/button9"-->
-                <!--android:layout_toStartOf="@+id/button9"-->
-                <!--android:background="@drawable/instagram1" />-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button9"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_alignTop="@+id/contact"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:background="@drawable/youtube1"-->
-
-                <!--/>-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button10"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_alignTop="@+id/contact"-->
-                <!--android:layout_marginLeft="20dp"-->
-                <!--android:layout_marginStart="20dp"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_toEndOf="@+id/button9"-->
-                <!--android:layout_toRightOf="@+id/button9"-->
-                <!--android:background="@drawable/linkedin1" />-->
-
-                <!--<Button-->
-                <!--android:id="@+id/button11"-->
-                <!--android:layout_width="30dp"-->
-                <!--android:layout_height="30dp"-->
-                <!--android:layout_alignTop="@+id/contact"-->
-                <!--android:layout_marginLeft="20dp"-->
-                <!--android:layout_marginStart="20dp"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_toEndOf="@+id/button10"-->
-                <!--android:layout_toRightOf="@+id/button10"-->
-                <!--android:background="@drawable/tweeter1" />-->
-
-
-
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="120dp"
@@ -327,6 +235,7 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
+
         android:background="#1b1b1b">
 
         <ScrollView

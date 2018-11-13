@@ -25,6 +25,7 @@ import static com.mrpistonapp.android.imageupload.MainActivity.mrPistonDBRef;
 
 public class Choose extends AppCompatActivity {
 
+    //test
     private Spinner modelSpinner , yearSpinner ;
    // private RadioGroup subRG1_1, subRG1_2, subRG1_3, subRG2_1, subRG2_2, subRG2_3, subRG3_1, subRG3_2, subRG3_3;
     private Button okButton; // button1 , button2 , button3 , button1_1 , button1_2;

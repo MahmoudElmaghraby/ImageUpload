@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.mrpistonapp.android.imageupload">
+    package="com.mrpistonapp2.android.imageupload">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -15,10 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2249470881400414~4934420923"/>
+            android:value="ca-app-pub-3430687372646829~3752500494" />
 
         <activity
             android:name=".SplashScreen"
@@ -45,22 +44,16 @@
             android:name=".Lubricants"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            tools:targetApi="jelly_bean">
-
-        </activity>
+            tools:targetApi="jelly_bean" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Maintenance"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".ContactWithUs">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ContactWithUs" />
+        <activity android:name=".MyCartRV"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

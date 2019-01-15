@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-2249470881400414/3510901888"/>
+            ads:adUnitId="ca-app-pub-3430687372646829/9482096059"/>
 
 
         <TextView
@@ -385,7 +385,7 @@
     </LinearLayout>
 
     <include
-        layout="@layout/contact_us"
+        layout="@layout/activity_contact_with_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

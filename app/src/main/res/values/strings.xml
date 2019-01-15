@@ -4,7 +4,6 @@
     <string name="open" translatable="false">Open</string>
     <string name="close" translatable="false">Close</string>
 
-
     <string name="select_automobile_brand">SELECT AUTOMOBILE BRAND</string>
     <string name="ok">OK</string>
     <string name="choose_system">CHOOSE SYSTEM</string>
@@ -15,7 +14,7 @@
     <string name="suspension_sys">SUSPENSION SYS.</string>
     <string name="lubricants">LUBRICANTS</string>
     <string name="coming_soon">COMING SOON</string>
-    <string name="find_needed_spare_parts_here">Find needed spare parts here..</string>
+    <string name="find_needed_spare_parts_here">Search by Part number</string>
     <string name="welcome_to">WELCOME TO</string>
     <string name="now_you_can_purchase_easily">NOW YOU CAN PURCHASE EASILY !</string>
     <string name="spare_parts">SPARE PARTS</string>

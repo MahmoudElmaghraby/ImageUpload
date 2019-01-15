@@ -8,7 +8,7 @@
     tools:context=".Maintenance">
 
     <include
-        layout="@layout/contact_us"
+        layout="@layout/activity_contact_with_us"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

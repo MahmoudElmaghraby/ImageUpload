@@ -74,15 +74,17 @@
                     android:textAllCaps="false"
                     android:textSize="15sp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginRight="4dp"
                     android:background="@drawable/register_button"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="4dp" />
 
                 <Button
                     android:id="@+id/confirmation_confirm_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Confirm"
+                    android:text="Add to Cart"
                     android:textAllCaps="false"
                     android:textSize="15sp"
                     android:layout_marginTop="15dp"

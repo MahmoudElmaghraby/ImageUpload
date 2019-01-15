@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-2249470881400414/3510901888"/>
+            ads:adUnitId="ca-app-pub-3430687372646829/9482096059"/>
 
         <TextView
             android:layout_gravity="center"
@@ -135,7 +135,7 @@
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="126dp"
-                android:text="@string/suspension_sys"
+                android:text="@string/power_train_sys"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_alignParentLeft="true"
@@ -147,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/img4"
                 android:layout_alignTop="@+id/text_test_3"
-                android:text="@string/power_train_sys"
+                android:text="@string/suspension_sys"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_alignLeft="@+id/img4" />
@@ -155,7 +155,7 @@
         </RelativeLayout>
 
         <include
-            layout="@layout/contact_us"
+            layout="@layout/activity_contact_with_us"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp" />

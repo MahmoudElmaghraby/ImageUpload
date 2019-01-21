@@ -33,22 +33,11 @@
             ads:adSize="BANNER"
             ads:adUnitId="ca-app-pub-3430687372646829/9482096059"/>
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/select_automobile_brand"
-            android:textSize="25sp"
-            android:gravity="center"
-            android:layout_marginBottom="40dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@android:color/white"/>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="20dp"
             android:paddingBottom="8dp">
 
             <ImageView

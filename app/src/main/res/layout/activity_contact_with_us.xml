@@ -8,7 +8,6 @@
     android:background="#a4a4a4"
     tools:context=".ContactWithUs">
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

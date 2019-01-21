@@ -10,7 +10,7 @@
     <string name="to_select_spare_parts_you_need">TO SELECT SPARE PARTS YOU NEED</string>
     <string name="braking_sys">BRAKING SYS.</string>
     <string name="electrical_sys">ELECTRICAL SYS.</string>
-    <string name="power_train_sys">POWER-TRAIN SYS.</string>
+    <string name="power_train_sys">ENGINE</string>
     <string name="suspension_sys">SUSPENSION SYS.</string>
     <string name="lubricants">LUBRICANTS</string>
     <string name="coming_soon">COMING SOON</string>
@@ -23,7 +23,7 @@
     <string name="about_long_text" translatable="false">Mr. Piston aims to facilitate the market of automobiles\' spare parts for his clients who can get all spare parts for their cars with many features such as our attractive prices, our delivery services, rapid response with professional digital marketing technology by using our mobile application.</string>
     <string name="user_name">USER NAME</string>
     <string name="location">LOCATION</string>
-    <string name="call_us">CALL US</string>
+    <string name="call_us">CONTACT US</string>
     <string name="product_name">Product Name :</string>
     <string name="product_price">Product Price :</string>
     <string name="product_type">Product Type :</string>
@@ -52,6 +52,12 @@
     <string-array name="yearArray">
         <item>year 1</item>
         <item>year 2</item>
+    </string-array>
+
+    <string-array name="quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
 
     <!--<string-array name="toyotaMainStringArray">-->

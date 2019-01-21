@@ -9,12 +9,18 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.NumberPicker;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.squareup.picasso.Picasso;
 
 public class ProductDetails extends AppCompatActivity {
@@ -22,7 +28,6 @@ public class ProductDetails extends AppCompatActivity {
     private Toolbar toolbar;
 
     private TextView productNameTV, productPriceTV, productTypeTV, productCountry;
-    public static NumberPicker numPicker;
     private ImageView productImage;
     protected Button productButton;
     private Dialog dialog ;
@@ -30,10 +35,39 @@ public class ProductDetails extends AppCompatActivity {
     private TextView confirmationName , confirmationType , confirmationQuantity , confirmationOrderPrice ;
     private Button confirmationConfirmButton , confirmationCancelButton ;
 
+    private AdView mAdView;
+    private Spinner quantitySpinner ;
+    public static int quantity = 0 ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
+
+        quantitySpinner = findViewById(R.id.quantity_spinner);
+        ArrayAdapter<CharSequence> quantityAdapter = ArrayAdapter.createFromResource(ProductDetails.this , R.array.quantity , android.R.layout.simple_spinner_item);
+        quantityAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        quantitySpinner.setAdapter(quantityAdapter);
+        quantitySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                quantity = Integer.parseInt(adapterView.getItemAtPosition(i).toString());
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        MobileAds.initialize(this, "ca-app-pub-3430687372646829~3752500494");
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
 
         toolbar = findViewById(R.id.toolBar);
         setSupportActionBar(toolbar);
@@ -51,11 +85,6 @@ public class ProductDetails extends AppCompatActivity {
         productPriceTV.setText("" + MainActivity.productPrice);
         productTypeTV.setText(MainActivity.productYear);
         productCountry.setText(MainActivity.productCountry);
-
-        numPicker = findViewById(R.id.num_picker);
-        numPicker.setMinValue(1);
-        numPicker.setMaxValue(3);
-        numPicker.setWrapSelectorWheel(false);
 
         productImage = findViewById(R.id.product_image_view);
         Picasso.with(this)
@@ -110,8 +139,8 @@ public class ProductDetails extends AppCompatActivity {
 
                     confirmationName.setText("Product Name : " + MainActivity.productName);
                     confirmationType.setText("Product Type : " + MainActivity.productType);
-                    confirmationQuantity.setText("Products quantity : " + numPicker.getValue());
-                    float orderPrice = numPicker.getValue() * MainActivity.productPrice ;
+                    confirmationQuantity.setText("Products quantity : " + quantity);
+                    float orderPrice = quantity * MainActivity.productPrice ;
                     confirmationOrderPrice.setText("The price is : " +  orderPrice + " L.E");
 
                     confirmationConfirmButton.setOnClickListener(new View.OnClickListener() {
@@ -128,13 +157,13 @@ public class ProductDetails extends AppCompatActivity {
                                     MainActivity.loggedEmail,
                                     MainActivity.productPtNo,
                                     MainActivity.loggedName,
-                                    (int) numPicker.getValue(),
+                                    (int) quantity,
                                     (int) 500 ,
                                     MainActivity.productImage);
                             orderPartName = myOrder.getOrderNamePt();
                             MainActivity.mrPistonDBRef.child("Carts").child(MainActivity.loggedName).child(orderPartName).setValue(myOrder);
                             Toast.makeText(ProductDetails.this, "Added to cart successfully ", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(ProductDetails.this, MainActivity.class);
+                            Intent intent = new Intent(ProductDetails.this, LeftButton.class);
                             startActivity(intent);
                             finish();
                         }
@@ -153,6 +182,14 @@ public class ProductDetails extends AppCompatActivity {
 
             }
         });
+
+
+//        ArrayAdapter<CharSequence> firstAdapter = ArrayAdapter.createFromResource(Choose.this , R.array.modelArray , android.R.layout.simple_spinner_item);
+//        firstAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        modelSpinner.setAdapter(firstAdapter);
+
+
+
 
 
     }

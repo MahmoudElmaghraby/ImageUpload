@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -29,10 +32,24 @@ public class LeftButton extends AppCompatActivity {
 
     private List<Upload> mUploads;
 
+    private TextView textView ;
+    private Button button ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_left_button);
+
+        textView = findViewById(R.id.text_view);
+        button = findViewById(R.id.bitton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MyTask myTask = new MyTask(LeftButton.this , textView , button , mRecyclerView);
+                myTask.execute();
+                button.setEnabled(false);
+            }
+        });
 
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);

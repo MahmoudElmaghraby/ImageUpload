@@ -189,8 +189,5 @@ public class ProductDetails extends AppCompatActivity {
 //        modelSpinner.setAdapter(firstAdapter);
 
 
-
-
-
     }
 }

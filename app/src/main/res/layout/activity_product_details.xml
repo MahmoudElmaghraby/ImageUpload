@@ -51,7 +51,7 @@
                         android:paddingEnd="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="5dp"
-                        android:text="Product Name: :"
+                        android:text="@string/product_name"
                         android:textSize="12sp"
                         tools:ignore="RtlSymmetry" />
 
@@ -86,7 +86,7 @@
                         android:paddingEnd="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="5dp"
-                        android:text="Product Country :"
+                        android:text="@string/product_country"
                         android:textSize="12sp"
                         tools:ignore="RtlSymmetry" />
 
@@ -120,7 +120,7 @@
                         android:paddingEnd="30dp"
                         android:paddingRight="30dp"
                         android:paddingTop="5dp"
-                        android:text="Product Year :"
+                        android:text="@string/product_year"
                         android:textSize="12sp"
                         tools:ignore="RtlSymmetry" />
 
@@ -154,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Quantity"
+                        android:text="@string/quantity"
                         android:textColor="@android:color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -182,7 +182,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:text="Review "
+                        android:text="@string/review"
                         android:textColor="@android:color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -208,7 +208,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="PART PRICE : "
+                        android:text="@string/part_price"
                         android:textColor="@android:color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -229,7 +229,7 @@
                         android:layout_gravity="center"
                         android:layout_weight=".5"
                         android:gravity="center"
-                        android:text="L.E"
+                        android:text="@string/l_e"
                         android:textSize="12sp"
                         android:textStyle="bold" />
 
@@ -247,7 +247,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_weight="1"
-                        android:text="ORDER PRICE : "
+                        android:text="@string/order_price"
                         android:textColor="@android:color/black"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -267,7 +267,7 @@
                         android:layout_gravity="center"
                         android:layout_weight=".5"
                         android:gravity="center"
-                        android:text="L.E"
+                        android:text="@string/l_e"
                         android:textSize="12sp" />
 
                 </LinearLayout>

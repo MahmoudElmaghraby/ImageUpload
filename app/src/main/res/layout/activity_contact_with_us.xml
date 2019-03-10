@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:layout_alignParentBottom="true"
     android:background="#a4a4a4"
     tools:context=".ContactWithUs">
 
@@ -70,7 +71,7 @@
         android:background="#1b1b1b"
         android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
-        android:text="ALL COPYRIGHTS FOR MR. PISTON ® ARE RESERVED."
+        android:text="@string/all_copyrights_for_mr_piston_are_reserved"
         android:textColor="#4b4c4c"
         android:textSize="12sp" />
 

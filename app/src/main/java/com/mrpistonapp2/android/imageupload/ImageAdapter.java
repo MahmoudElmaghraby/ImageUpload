@@ -21,7 +21,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHol
     private String partbrand, partmodel, partType;
 
     private Context mContext;
-    private List<Upload> mUploads;
+    public static List<Upload> mUploads;
     private onItemClickListener mListener;
 
     public interface onItemClickListener {

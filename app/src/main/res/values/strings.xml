@@ -4,6 +4,9 @@
     <string name="open" translatable="false">Open</string>
     <string name="close" translatable="false">Close</string>
 
+    <string name="facebook_app_id" translatable="false">2067799469933231</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb2067799469933231</string>
+
     <string name="select_automobile_brand">SELECT AUTOMOBILE BRAND</string>
     <string name="ok">OK</string>
     <string name="choose_system">CHOOSE SYSTEM</string>
@@ -59,74 +62,20 @@
         <item>2</item>
         <item>3</item>
     </string-array>
-
-    <!--<string-array name="toyotaMainStringArray">-->
-    <!--<item>toyotaModel 1</item>-->
-    <!--<item>toyotaModel 2</item>-->
-    <!--<item>toyotaModel 3</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="toyotaSubStringArray1">-->
-    <!--<item>toyotaYear 1_1</item>-->
-    <!--<item>toyotaYear 1_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="toyotaSubStringArray2">-->
-    <!--<item>toyotaYear 2_1</item>-->
-    <!--<item>toyotaYear 2_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="subStringArray3">-->
-    <!--<item>toyotaYear 3_1</item>-->
-    <!--<item>toyotaYear 3_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="toyotaArray1_1">-->
-    <!--<item>toyota1_1</item>-->
-    <!--<item>toyota1_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="toyotaArray1_2">-->
-    <!--<item>toyota2_1</item>-->
-    <!--<item>toyota2_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="toyotaArray1_3">-->
-    <!--<item>toyota3_1</item>-->
-    <!--<item>toyota3_2</item>-->
-    <!--</string-array>-->
-
-
-    <!--<string-array name="kiaArray1_1">-->
-    <!--<item>kia1_1</item>-->
-    <!--<item>kia1_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="kiaArray1_2">-->
-    <!--<item>kia2_1</item>-->
-    <!--<item>kia2_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="kiaArray1_3">-->
-    <!--<item>kia3_1</item>-->
-    <!--<item>kia3_2</item>-->
-    <!--</string-array>-->
-
-
-    <!--<string-array name="hyundaiArray1_1">-->
-    <!--<item>hyundai1_1</item>-->
-    <!--<item>hyundai1_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="hyundaiArray1_2">-->
-    <!--<item>hyundai2_1</item>-->
-    <!--<item>hyundai2_2</item>-->
-    <!--</string-array>-->
-
-    <!--<string-array name="hyundaiArray1_3">-->
-    <!--<item>hyundai3_1</item>-->
-    <!--<item>hyundai3_2</item>-->
-    <!--</string-array>-->
+    <string name="appwidget_text">Number of items in your Cart : </string>
+    <string name="second_text_view_widget">Number of available items : </string>
+    <string name="configure">Enter widget name</string>
+    <string name="add_widget">Add widget</string>
+    <string name="click_button_to_load_the_available_items">Click button to load the available items</string>
+    <string name="load_items">Load Items</string>
+    <string name="all_copyrights_for_mr_piston_are_reserved">ALL COPYRIGHTS FOR MR. PISTON ® ARE RESERVED.</string>
+    <string name="product_country">Product Country :</string>
+    <string name="product_year">Product Year :</string>
+    <string name="quantity">Quantity</string>
+    <string name="review">Review</string>
+    <string name="part_price">PART PRICE :</string>
+    <string name="l_e">L.E</string>
+    <string name="order_price">ORDER PRICE :</string>
 
 
 </resources>

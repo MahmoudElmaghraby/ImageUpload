@@ -34,6 +34,20 @@
     <string name="login">تسجيل الدخول</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="contact_us">تواصل معنا</string>
+    <string name="appwidget_text">عدد محتويات العربه :</string>
+    <string name="second_text_view_widget">عدد المحتويات المتاحه :</string>
+    <string name="configure">ادخل اسم الاختصار</string>
+    <string name="add_widget">اضافة اختصار</string>
+    <string name="click_button_to_load_the_available_items">اضغط الزر لتحميل المحتويات المتاحه</string>
+    <string name="load_items">تحميل المحتويات</string>
+    <string name="all_copyrights_for_mr_piston_are_reserved">جميع الحقوق محفوظه لشركة سايفر</string>
+    <string name="product_country">بلد المنتج :</string>
+    <string name="product_year">سنة المنتج :</string>
+    <string name="quantity">لبكميخه</string>
+    <string name="review">تقيم</string>
+    <string name="part_price">سعر القطعه :</string>
+    <string name="l_e">جنيه</string>
+    <string name="order_price">سعر التوصيل :</string>
 
     <string-array name="modelArray">
         <item>النوع 1</item>

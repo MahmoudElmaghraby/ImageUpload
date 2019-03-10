@@ -23,9 +23,9 @@ public class MyCartRV extends AppCompatActivity {
 
     private RecyclerView cartRecyclerView;
     private CartAdapter cartAdapter;
+    private Order cartOrderUpload;
 
     private String id;
-    private Order cartOrderUpload;
     private Button parchusAllButton;
 
     private DatabaseReference cartDatabaseRef;

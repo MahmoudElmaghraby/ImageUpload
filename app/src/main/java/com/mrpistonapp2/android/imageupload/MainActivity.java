@@ -29,9 +29,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -59,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
     public static String loggedEmail;
     public static boolean searchbarpressed = false;
     public static String productName;
-    public static String productNameEn ;
+    public static String productNameEn;
     public static float productPrice;
     public static String productType;
     public static String productPtNo;
     public static String productImage;
     public static String productCountry;
-    public static String productYear ;
+    public static String productYear;
     public static List<Order> cartList;
     public static String searchBarText;
 
@@ -87,24 +84,19 @@ public class MainActivity extends AppCompatActivity {
     private StorageReference mStorage;
     private String userName;
 
-
-    private AdView mAdView;
-
-    private Button faceBtn , instaBtn , youtubeBtn , linkedinBtn , twitterBtn ;
-
+    private Button faceBtn, instaBtn,  linkedinBtn, twitterBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // String language = Locale.getDefault().getDisplayLanguage();
 
         faceBtn = findViewById(R.id.face);
         faceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse("https://www.facebook.com/mrpistonegy/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/mrpistonegy/"));
                 startActivity(intent);
             }
         });
@@ -113,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         instaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse("https://www.instagram.com/mrpistonegy/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/mrpistonegy/"));
                 startActivity(intent);
             }
         });
@@ -122,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
         linkedinBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse("https://www.linkedin.com/company/mr-piston"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/company/mr-piston"));
                 startActivity(intent);
             }
         });
@@ -132,18 +124,10 @@ public class MainActivity extends AppCompatActivity {
         twitterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse("https://twitter.com/mrpistonegy"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/mrpistonegy"));
                 startActivity(intent);
             }
         });
-
-
-
-        MobileAds.initialize(this, "ca-app-pub-3430687372646829~3752500494");
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
 
         // to not popup the keyboard when the app begin
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
@@ -204,7 +188,7 @@ public class MainActivity extends AppCompatActivity {
         rightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this , Maintenance.class);
+                Intent intent = new Intent(MainActivity.this, Maintenance.class);
                 startActivity(intent);
             }
         });
@@ -219,9 +203,6 @@ public class MainActivity extends AppCompatActivity {
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
-
-//            finish();
-//            System.exit(0);
 
         }
     }
@@ -257,7 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 imageTv = dialog.findViewById(R.id.image_textView);
                 emailTextView = dialog.findViewById(R.id.email_text_view);
                 passwordTextView = dialog.findViewById(R.id.password_textView);
-                loginButton = dialog.findViewById(R.id.login_button);
+                loginButton = dialog.findViewById(R.id.login_btn);
                 registrationButton = dialog.findViewById(R.id.register_button);
                 logoutButton = dialog.findViewById(R.id.logout_button);
                 userImage = dialog.findViewById(R.id.user_image);
@@ -411,18 +392,16 @@ public class MainActivity extends AppCompatActivity {
                 });
 
                 dialog.show();
-                return true ;
+                return true;
 
-            case R.id.cart :
+            case R.id.cart:
 
-                if (loggedIn == 0 ){
+                if (loggedIn == 0) {
                     Toast.makeText(this, "you are not logged in \n Please log in first", Toast.LENGTH_SHORT).show();
-                    return true ;
-                }
-
-                else  {
-                        Intent intent = new Intent(MainActivity.this, MyCartRV.class);
-                        startActivity(intent);
+                    return true;
+                } else {
+                    Intent intent = new Intent(MainActivity.this, MyCartRV.class);
+                    startActivity(intent);
 
                     return true;
                 }
@@ -602,5 +581,6 @@ public class MainActivity extends AppCompatActivity {
         return connectivityManager.getActiveNetworkInfo() != null;
 
     }
+
 
 }

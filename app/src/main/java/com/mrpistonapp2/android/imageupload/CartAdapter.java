@@ -17,7 +17,7 @@ import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
 
-    private List<Order> cartList ;
+    public static List<Order> cartList ;
     private Context cartContext ;
 
 
